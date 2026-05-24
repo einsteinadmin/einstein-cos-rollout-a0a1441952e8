@@ -772,7 +772,10 @@
       <a href="#mcps"><span class="nav-num">5</span> MCPs &amp; APIs</a>
       <a href="#network"><span class="nav-num">6</span> The Network</a>
       <a href="#rollout"><span class="nav-num">7</span> Your Rollout</a>
-      <a href="#reference"><span class="nav-num">8</span> Quick Reference</a>
+      <a href="#rhythm"><span class="nav-num">8</span> The Daily Rhythm</a>
+      <a href="#dashboard"><span class="nav-num">9</span> Your Personal Dashboard</a>
+      <a href="#tools"><span class="nav-num">10</span> Tools You'll Need</a>
+      <a href="#reference"><span class="nav-num">11</span> Quick Reference</a>
     </nav>
     <div class="sidebar-foot">
       Got a question while reading? Tap the orange <strong style="color:var(--orange);">💬</strong> bottom-right and drop a note.
@@ -851,7 +854,9 @@
     </p>
     <p>
       This page is your orientation. Walk through it once with me, then re-open it any time you
-      forget how a piece works. Eight sections. Roughly a 12-minute read if you go top to bottom.
+      forget how a piece works. Eleven sections. Roughly a 15-minute read top to bottom — but
+      Section 8 (the daily rhythm) is the one to actually internalize. Skip it and the whole
+      thing falls apart.
     </p>
 
 
@@ -1382,8 +1387,203 @@ The HTML body renders empty when wrapped.
     </p>
 
 
-    <!-- ===== SECTION 8: QUICK REFERENCE ===== -->
-    <h2 id="reference"><span class="sec-num">8</span>Quick Reference</h2>
+    <!-- ===== SECTION 8: THE DAILY RHYTHM ===== -->
+    <h2 id="rhythm"><span class="sec-num">8</span>The Daily Rhythm</h2>
+    <p>
+      If you skim past every other section, don't skim this one. The system only works if you run
+      the daily and weekly rituals. Skip them and your COS starts to drift. Memory files pile up
+      stale. The Shared Context Board doesn't get checked. Other COSes try to ping yours and get
+      no reply. Velocity stops logging. Kaizen never happens. The whole thing turns into a chat
+      window with extra steps.
+    </p>
+    <p>
+      Two rituals are non-negotiable. Two more are situational. Here's the full picture.
+    </p>
+
+    <h3>Non-negotiable: every morning</h3>
+    <div class="callout">
+      <strong>Run <code>/gm</code> first thing.</strong>
+      Before you open Monday, before you read Slack, before you check email. The COS pulls your
+      calendar, scans your boards, checks notifications, reads new SCB posts from other agents,
+      and writes you a one-page day plan. <em>That's how it learns what changed overnight.</em>
+      Skip this and it's working from yesterday's picture.
+    </div>
+
+    <h3>Non-negotiable: every Friday</h3>
+    <div class="callout">
+      <strong>Run <code>/wrap</code> before you log off.</strong>
+      This is the heaviest skill in the rotation, and it's the one that keeps the system
+      maintained. <code>/wrap</code> does five jobs in one shot:
+      <ol style="margin: 10px 0 0 0; padding-left: 22px;">
+        <li><strong>Logs weekly velocity</strong> (every Done pulse, every LOW point)</li>
+        <li><strong>Surfaces the praise queue</strong> so wins don't get lost</li>
+        <li><strong>Scans the Shared Context Board</strong> for replies from other COSes</li>
+        <li><strong>Runs a Kaizen pass</strong> — one improvement to the system itself</li>
+        <li><strong>Prunes memory files</strong> that went stale this week</li>
+      </ol>
+      <p style="margin-top: 10px; margin-bottom: 0;">
+      Skip <code>/wrap</code> for two weeks in a row and the system noticeably gets worse. You'll
+      feel it before you can name it.
+      </p>
+    </div>
+
+    <h3>Situational: <code>/save</code></h3>
+    <p>
+      Run <code>/save</code> when you're <em>switching contexts mid-day</em> — finishing a focus
+      block, jumping from one project to another, walking away for an extended interruption. It
+      writes a "pick up here" note so the next session (or the next you) starts where this one
+      ended. Think of it as a verbal handoff to your future self.
+    </p>
+    <p>
+      Don't overuse it. Three or four times in a long workday, max. If you find yourself running
+      it after every five-minute task, that's a signal you're switching contexts too often, not
+      that you need more saves.
+    </p>
+
+    <h3>Situational: <code>/compact</code></h3>
+    <p>
+      Different beast. <code>/compact</code> is a memory-management operation, not a handoff. When
+      a session gets long and the conversation history starts filling up the context window, the
+      COS rewrites that history into a tight summary — keeping the important stuff, dropping the
+      noise. The session continues from the compacted history.
+    </p>
+    <p>
+      Usually you don't have to call this. Autocompact is on and kicks in automatically when
+      things get heavy. But on big work sessions where you want to extend the runway deliberately,
+      typing <code>/compact</code> gives you that fresh slate without losing the thread.
+    </p>
+
+    <div class="callout warn" style="margin-top: 24px;">
+      <strong>The honest version.</strong>
+      Week one, you'll forget <code>/gm</code> half the time. That's fine, build the habit.
+      The leader who runs <code>/gm</code> every morning and <code>/wrap</code> every Friday for
+      a full quarter ends up with a COS that's noticeably sharper than the leader who runs them
+      sometimes. Same model. Same setup. Different rhythm. The compound effect is the whole game.
+    </div>
+
+
+    <!-- ===== SECTION 9: YOUR PERSONAL DASHBOARD ===== -->
+    <h2 id="dashboard"><span class="sec-num">9</span>Your Personal Dashboard</h2>
+    <p>
+      Here's what happens when you run those skills regularly: a personal dashboard emerges. Not
+      because you built it. Because everything you're doing is being captured, and the COS can
+      pull it together on demand.
+    </p>
+    <p>
+      My dashboard lives at <a href="https://qgr.einsteinmoving.com">qgr.einsteinmoving.com</a>
+      (gated to <code>@einsteinmoving.com</code>) and there's also a lighter-weight live build
+      in the <code>goals-dashboard</code> repo. One HTML page. It shows:
+    </p>
+
+    <div class="integ-grid">
+      <div class="integ-card">
+        <p class="integ-name">My QGs, current status</p>
+        <p class="integ-use">Every quarterly goal, green / super-green / red, with the why behind the score.</p>
+      </div>
+      <div class="integ-card">
+        <p class="integ-name">My directs' QGs</p>
+        <p class="integ-use">Roundtable rollup — who's on track, who needs a conversation, what changed since last week.</p>
+      </div>
+      <div class="integ-card">
+        <p class="integ-name">Recent decisions</p>
+        <p class="integ-use">The calls I've made this quarter and the reasoning, so I don't re-litigate.</p>
+      </div>
+      <div class="integ-card">
+        <p class="integ-name">Praise queue</p>
+        <p class="integ-use">Wins that haven't been delivered yet. Surfaces during <code>/gm</code> + <code>/wrap</code>.</p>
+      </div>
+    </div>
+
+    <p>
+      Here's the part most people miss: <strong>I don't update this dashboard manually.</strong>
+      It updates from the skills I'm already running.
+    </p>
+
+    <table class="cheat">
+      <thead>
+        <tr><th>When I run this</th><th>The dashboard gets</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>/meeting-prep</code></td><td>Latest QG status pulled into the prep doc, so I walk in knowing the state</td></tr>
+        <tr><td><code>/digest</code></td><td>Pulses get touched, decisions get logged, dashboard reflects what was just decided</td></tr>
+        <tr><td><code>/retro</code></td><td>Weekly summary writes a new "what changed this week" entry</td></tr>
+        <tr><td><code>/wrap</code></td><td>Velocity rolls in, praise queue updates, deadlines re-sort</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout blue">
+      <strong>The build tip.</strong>
+      Don't try to design your dashboard up front. Ask your COS to build you a v1 sometime in
+      your first month, using the data it already has on you. Six status cards, a praise strip,
+      a deadline rail. Run it for two weeks. Then tell your COS what's missing and what's noise.
+      Three or four iterations and you'll have something that fits how you actually work.
+    </div>
+
+    <p>
+      The dashboard is where the compound effect becomes visible. After a quarter of running the
+      daily rhythm, you can open one URL and see your whole operation — what's green, what's red,
+      what needs a hard conversation this week, who deserves praise, what's slipping. Without it,
+      that picture lives in your head and in Monday and in Slack and in your inbox and in your
+      gut. With it, it's just on a page.
+    </p>
+
+
+    <!-- ===== SECTION 10: TOOLS YOU'LL NEED ===== -->
+    <h2 id="tools"><span class="sec-num">10</span>Tools You'll Need</h2>
+    <p>
+      Your COS does most of the heavy lifting. But it can only work with what you give it. Two
+      categories of outside tools pay for themselves the first week you use them.
+    </p>
+
+    <h3>Dictation — get your voice into the COS faster than you can type</h3>
+    <div class="integ-card" style="margin: 12px 0;">
+      <p class="integ-name">Why it matters</p>
+      <p class="integ-use" style="margin-bottom: 12px;">
+        Most of the prompts you give your COS aren't carefully composed — they're how you actually
+        talk. Dictation captures that authentic voice (and the thinking you do walking the office
+        or driving) without forcing you back to a keyboard. It also turns out the COS responds
+        better to a natural spoken brief than a typed bullet list. You explain more, you assume less.
+      </p>
+      <p class="integ-name">What I use today</p>
+      <p class="integ-use">
+        <strong>Wispr Flow.</strong> Runs in the background, transcribes when I hold a hotkey.
+        Punctuation and code blocks come out clean. Worth it on day one.
+      </p>
+    </div>
+
+    <h3>AI Notetaker — every meeting becomes a transcript your COS can digest</h3>
+    <div class="integ-card" style="margin: 12px 0;">
+      <p class="integ-name">Why it matters</p>
+      <p class="integ-use" style="margin-bottom: 12px;">
+        The <code>/digest</code> skill is one of the highest-value workflows in the COS. You hand
+        it a meeting transcript, it updates the right pulses, logs decisions, surfaces praise,
+        and writes a recap. But it needs a transcript. Without an AI notetaker capturing your
+        meetings, <code>/digest</code> doesn't have anything to work with.
+      </p>
+      <p class="integ-name">What Mike + I use today</p>
+      <p class="integ-use" style="margin-bottom: 12px;">
+        <strong>Plaud.</strong> Small hardware recorder that captures any in-person or remote
+        meeting and produces a clean transcript. Good for our in-the-field workflow.
+      </p>
+      <p class="integ-name">Other options worth knowing</p>
+      <p class="integ-use">
+        <strong>Granola</strong> (software-only, runs in your menu bar, great for Zoom-heavy
+        calendars). <strong>Otter</strong> (the classic — solid transcripts, integrates
+        everywhere). Both work fine with <code>/digest</code>.
+      </p>
+    </div>
+
+    <div class="callout flag">
+      <strong>Standard TBD.</strong>
+      I'm working through what the company-wide standard looks like for both categories
+      (dictation + notetaker) — what we license, who pays, how onboarding works. Until that
+      lands, run with what fits your workflow today. The COS works with any of these tools,
+      so you're not locked in. I'll update this section once procurement decisions are final.
+    </div>
+
+
+    <!-- ===== SECTION 11: QUICK REFERENCE ===== -->
+    <h2 id="reference"><span class="sec-num">11</span>Quick Reference</h2>
     <p>
       Cheat sheet. Bookmark this section.
     </p>
