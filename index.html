@@ -854,9 +854,9 @@
     </p>
     <p>
       This page is your orientation. Walk through it once with me, then re-open it any time you
-      forget how a piece works. Eleven sections. Roughly a 15-minute read top to bottom — but
-      Section 8 (the daily rhythm) is the one to actually internalize. Skip it and the whole
-      thing falls apart.
+      forget how a piece works. Eleven sections. Roughly a 15-minute read top to bottom. Section
+      8 (the daily rhythm) is the one that pays the biggest dividend the more consistently you
+      run it.
     </p>
 
 
@@ -1390,40 +1390,69 @@ The HTML body renders empty when wrapped.
     <!-- ===== SECTION 8: THE DAILY RHYTHM ===== -->
     <h2 id="rhythm"><span class="sec-num">8</span>The Daily Rhythm</h2>
     <p>
-      If you skim past every other section, don't skim this one. The system only works if you run
-      the daily and weekly rituals. Skip them and your COS starts to drift. Memory files pile up
-      stale. The Shared Context Board doesn't get checked. Other COSes try to ping yours and get
-      no reply. Velocity stops logging. Kaizen never happens. The whole thing turns into a chat
-      window with extra steps.
-    </p>
-    <p>
-      Two rituals are non-negotiable. Two more are situational. Here's the full picture.
+      Of all the sections in here, this one rewards consistency the most. The system isn't
+      magic — it's a feedback loop. The skills below are how the loop closes. Skip them now and
+      then (a QGR day, a vacation, a heads-down sprint) and you'll be fine. Skip them for more
+      than a few days in a row and the COS starts to drift: memory files go stale, the Shared
+      Context Board piles up, board sanity slides, Kaizen never lands.
     </p>
 
-    <h3>Non-negotiable: every morning</h3>
-    <div class="callout">
-      <strong>Run <code>/gm</code> first thing.</strong>
-      Before you open Monday, before you read Slack, before you check email. The COS pulls your
-      calendar, scans your boards, checks notifications, reads new SCB posts from other agents,
-      and writes you a one-page day plan. <em>That's how it learns what changed overnight.</em>
-      Skip this and it's working from yesterday's picture.
+    <div class="callout" style="margin-top: 18px;">
+      <strong>Personalize the specifics.</strong>
+      I'm describing how <em>I</em> run this rhythm. Yours will look different in places — your
+      boards, your sync cadence, even how you track praise (I run mine through Pending/Delivered
+      sub-items on a dedicated Praise board, but that's my pattern, not the template). The
+      <em>shape</em> is what matters: a morning briefing, an end-of-day close, a Friday system
+      pass. The specifics are yours to figure out, and your COS will help codify them in memory
+      as you go.
     </div>
 
-    <h3>Non-negotiable: every Friday</h3>
+    <h3>Every morning: <code>/gm</code></h3>
     <div class="callout">
-      <strong>Run <code>/wrap</code> before you log off.</strong>
-      This is the heaviest skill in the rotation, and it's the one that keeps the system
-      maintained. <code>/wrap</code> does five jobs in one shot:
+      <strong>Run <code>/gm</code> first thing, most days.</strong>
+      Before Monday, before Slack, before email. The COS pulls your calendar, scans your boards,
+      checks notifications, reads new SCB posts from other agents, and writes you a one-page day
+      plan. <em>That's how it learns what changed overnight.</em>
+      Skip when you're going straight into something all-consuming (a QGR session, a deep work
+      block, a travel day). Don't skip three or four days in a row — the morning picture stops
+      being accurate.
+    </div>
+
+    <h3>End of day: <code>/wrap</code> (light)</h3>
+    <div class="callout">
+      <strong>Daily <code>/wrap</code> is your close-out.</strong>
+      Lighter than the Friday version. Two jobs:
       <ol style="margin: 10px 0 0 0; padding-left: 22px;">
-        <li><strong>Logs weekly velocity</strong> (every Done pulse, every LOW point)</li>
-        <li><strong>Surfaces the praise queue</strong> so wins don't get lost</li>
-        <li><strong>Scans the Shared Context Board</strong> for replies from other COSes</li>
+        <li><strong>Final save</strong> of the day's work into the right pulses, so nothing you
+          touched today goes unlogged.</li>
+        <li><strong>Board sanity check</strong> — Today group cleared, This Week refreshed for
+          tomorrow, anything urgent flagged.</li>
+      </ol>
+      <p style="margin-top: 10px; margin-bottom: 0;">
+        Catches the stuff you meant to log but didn't. Takes 3-5 minutes. Sets you up to start
+        tomorrow with <code>/gm</code> from a clean picture.
+      </p>
+    </div>
+
+    <h3>Every Friday: <code>/wrap</code> (full)</h3>
+    <div class="callout">
+      <strong>Friday is the system maintenance pass.</strong>
+      This is the heaviest skill in the rotation, and it's where the system maintains itself.
+      Five jobs in one shot:
+      <ol style="margin: 10px 0 0 0; padding-left: 22px;">
+        <li><strong>Logs weekly velocity</strong> (every Done pulse, every LOW point — the COS
+          tallies your output)</li>
+        <li><strong>Surfaces the praise queue</strong> so wins don't get lost
+          <em>(I track mine through sub-items on a dedicated Praise board; your pattern might
+          look different)</em></li>
+        <li><strong>Scans the Shared Context Board</strong> for replies from other COSes you owe</li>
         <li><strong>Runs a Kaizen pass</strong> — one improvement to the system itself</li>
         <li><strong>Prunes memory files</strong> that went stale this week</li>
       </ol>
       <p style="margin-top: 10px; margin-bottom: 0;">
-      Skip <code>/wrap</code> for two weeks in a row and the system noticeably gets worse. You'll
-      feel it before you can name it.
+        Skip Friday <code>/wrap</code> for more than a couple weeks in a row and the system gets
+        noticeably draggy. Daily wrap is a habit. Friday wrap is the housekeeping that keeps the
+        rest fast.
       </p>
     </div>
 
@@ -1442,10 +1471,10 @@ The HTML body renders empty when wrapped.
 
     <h3>Situational: <code>/compact</code></h3>
     <p>
-      Different beast. <code>/compact</code> is a memory-management operation, not a handoff. When
-      a session gets long and the conversation history starts filling up the context window, the
-      COS rewrites that history into a tight summary — keeping the important stuff, dropping the
-      noise. The session continues from the compacted history.
+      Different beast. <code>/compact</code> is a memory-management operation, not a handoff.
+      When a session gets long and the conversation history starts filling up the context window,
+      the COS rewrites that history into a tight summary — keeping the important stuff, dropping
+      the noise. The session continues from the compacted history.
     </p>
     <p>
       Usually you don't have to call this. Autocompact is on and kicks in automatically when
@@ -1455,10 +1484,10 @@ The HTML body renders empty when wrapped.
 
     <div class="callout warn" style="margin-top: 24px;">
       <strong>The honest version.</strong>
-      Week one, you'll forget <code>/gm</code> half the time. That's fine, build the habit.
-      The leader who runs <code>/gm</code> every morning and <code>/wrap</code> every Friday for
-      a full quarter ends up with a COS that's noticeably sharper than the leader who runs them
-      sometimes. Same model. Same setup. Different rhythm. The compound effect is the whole game.
+      Week one, you'll forget <code>/gm</code> half the time. That's fine, build the habit. The
+      leader who runs the rhythm most days for a full quarter ends up with a COS that's
+      noticeably sharper than the leader who runs them sometimes. Same model. Same setup.
+      Different rhythm. The compound effect is the whole game.
     </div>
 
 
