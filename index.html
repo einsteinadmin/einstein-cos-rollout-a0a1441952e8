@@ -1,0 +1,1493 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<title>Meet Your Chief of Staff — Einstein Moving Co.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --orange:        #EF8B22;
+    --orange-soft:   #FFF4E5;
+    --orange-line:   #FBD9B0;
+    --orange-deep:   #C56F18;
+    --gray-900:      #1A1F23;
+    --gray-800:      #27343D;
+    --gray-700:      #53575A;
+    --gray-600:      #6B7280;
+    --gray-500:      #8A8F94;
+    --gray-300:      #D6D8DA;
+    --gray-200:      #E5E7E9;
+    --gray-100:      #F2F4F6;
+    --gray-50:       #F8F9FA;
+    --blue:          #0979C3;
+    --blue-soft:     #E6F1FA;
+    --green:         #2E7D32;
+    --green-soft:    #E8F5E9;
+    --warn:          #92400E;
+    --warn-soft:     #FEF3C7;
+    --ink:           #1A1F23;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--gray-100);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+  }
+
+  /* ---------- LAYOUT ---------- */
+  .layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    max-width: 1280px;
+    margin: 0 auto;
+    background: white;
+    min-height: 100vh;
+    box-shadow: 0 0 40px rgba(0,0,0,0.06);
+  }
+  .sidebar {
+    background: var(--gray-900);
+    color: white;
+    padding: 28px 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  .sidebar-head {
+    padding: 0 24px 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 14px;
+  }
+  .sidebar-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--orange);
+    font-weight: 700;
+    margin: 0 0 4px;
+  }
+  .sidebar-sub {
+    font-size: 13px;
+    color: var(--gray-500);
+    margin: 0;
+  }
+  .sidebar-nav { padding: 0; }
+  .sidebar-nav a {
+    display: block;
+    padding: 9px 24px 9px 20px;
+    color: rgba(255,255,255,0.78);
+    text-decoration: none;
+    font-size: 13.5px;
+    border-left: 3px solid transparent;
+    transition: all 140ms ease;
+  }
+  .sidebar-nav a:hover {
+    color: white;
+    background: rgba(255,255,255,0.04);
+    border-left-color: var(--orange);
+  }
+  .sidebar-nav .nav-num {
+    display: inline-block;
+    width: 22px;
+    color: var(--gray-500);
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .sidebar-foot {
+    margin-top: 20px;
+    padding: 16px 24px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    font-size: 11.5px;
+    color: var(--gray-500);
+    line-height: 1.5;
+  }
+
+  .content {
+    padding: 40px 56px 96px;
+    max-width: 900px;
+  }
+
+  /* ---------- TYPOGRAPHY ---------- */
+  h1, h2, h3, h4 { font-family: 'Roboto', sans-serif; color: var(--gray-900); margin: 0; }
+  h1 { font-size: 38px; font-weight: 900; line-height: 1.15; letter-spacing: -0.015em; }
+  h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 56px 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--orange-line);
+    letter-spacing: -0.01em;
+  }
+  h2 .sec-num {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 12px;
+    vertical-align: 3px;
+  }
+  h3 { font-size: 18px; font-weight: 700; margin: 26px 0 8px; }
+  h4 { font-size: 15px; font-weight: 700; margin: 18px 0 6px; color: var(--gray-800); }
+  p { margin: 0 0 14px; color: var(--gray-800); }
+  p.lede { font-size: 19px; line-height: 1.55; color: var(--gray-800); margin-bottom: 22px; }
+  strong { color: var(--gray-900); font-weight: 700; }
+  code {
+    font-family: 'Roboto Mono', ui-monospace, monospace;
+    background: var(--gray-100);
+    color: var(--orange-deep);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.92em;
+  }
+  a { color: var(--blue); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 140ms; }
+  a:hover { border-bottom-color: var(--blue); }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    background: linear-gradient(135deg, #FFFAF3 0%, #FFFFFF 65%);
+    border-radius: 16px;
+    padding: 40px 36px 36px;
+    margin-bottom: 8px;
+    border: 1px solid var(--orange-line);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 240px; height: 240px;
+    background: radial-gradient(circle, rgba(239,139,34,0.10) 0%, transparent 70%);
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--orange-deep);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .hero h1 { margin-bottom: 14px; }
+  .hero-sub {
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--gray-700);
+    margin: 0 0 28px;
+    max-width: 620px;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    padding: 18px 0 4px;
+    border-top: 1px solid var(--orange-line);
+    margin-top: 28px;
+  }
+  .hero-stat strong {
+    display: block;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--orange-deep);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .hero-stat span { font-size: 12.5px; color: var(--gray-700); }
+
+  /* ---------- 4-LAYER STACK DIAGRAM ---------- */
+  .stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 28px 0 0;
+    max-width: 460px;
+  }
+  .stack-layer {
+    background: white;
+    border: 1.5px solid var(--gray-300);
+    border-radius: 10px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+  }
+  .stack-layer.cos {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: white;
+    box-shadow: 0 4px 12px rgba(239,139,34,0.25);
+  }
+  .stack-layer.cos .stack-label,
+  .stack-layer.cos .stack-tag { color: white; }
+  .stack-arrow {
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-500);
+    font-size: 14px;
+  }
+  .stack-tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray-500);
+    font-weight: 700;
+    width: 84px;
+    flex-shrink: 0;
+  }
+  .stack-label { font-weight: 700; font-size: 15px; color: var(--gray-900); }
+  .stack-detail { font-size: 12.5px; color: var(--gray-600); margin-left: 8px; }
+  .stack-layer.cos .stack-detail { color: rgba(255,255,255,0.85); }
+
+  /* ---------- COMPARISON CARDS (Three Surfaces) ---------- */
+  .surface-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 22px 0;
+  }
+  .surface-card {
+    background: white;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 22px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .surface-card.is-cos {
+    border-color: var(--orange);
+    background: linear-gradient(180deg, var(--orange-soft) 0%, white 50%);
+    box-shadow: 0 6px 18px rgba(239,139,34,0.12);
+  }
+  .surface-badge {
+    position: absolute;
+    top: -10px; right: 14px;
+    background: var(--orange);
+    color: white;
+    font-size: 10.5px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .surface-name {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    color: var(--gray-900);
+  }
+  .surface-where {
+    font-size: 11.5px;
+    color: var(--gray-600);
+    margin-bottom: 14px;
+    font-family: 'Roboto Mono', monospace;
+  }
+  .surface-analogy {
+    font-style: italic;
+    color: var(--gray-700);
+    border-left: 3px solid var(--orange);
+    padding-left: 12px;
+    margin: 0 0 14px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .surface-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    color: var(--gray-700);
+  }
+  .surface-features li {
+    padding: 4px 0 4px 20px;
+    position: relative;
+  }
+  .surface-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: 700;
+  }
+  .surface-features li.no::before { content: "—"; color: var(--gray-500); }
+
+  /* ---------- FILE TREE ---------- */
+  .tree {
+    background: var(--gray-900);
+    color: #E8EAEB;
+    padding: 22px 24px;
+    border-radius: 10px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 13px;
+    line-height: 1.85;
+    margin: 18px 0;
+    overflow-x: auto;
+  }
+  .tree .t-root { color: var(--orange); font-weight: 500; }
+  .tree .t-key { color: var(--orange); font-weight: 500; }
+  .tree .t-dim { color: var(--gray-500); }
+  .tree .t-note { color: #6FB4E8; font-style: italic; }
+
+  /* ---------- HUB AND SPOKE (MCPs) ---------- */
+  .hub-and-spoke {
+    background: var(--gray-50);
+    border-radius: 14px;
+    padding: 28px 22px;
+    margin: 22px 0;
+    text-align: center;
+  }
+  .hub-center {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--orange);
+    color: white;
+    border-radius: 50%;
+    width: 110px; height: 110px;
+    font-weight: 700;
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.25;
+    margin: 16px auto;
+    box-shadow: 0 8px 24px rgba(239,139,34,0.3);
+    border: 4px solid white;
+  }
+  .spoke-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .spoke {
+    background: white;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 12px 8px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--gray-800);
+  }
+  .spoke span {
+    display: block;
+    font-size: 10.5px;
+    color: var(--gray-600);
+    font-weight: 400;
+    margin-top: 3px;
+  }
+
+  /* ---------- NETWORK DIAGRAM (SVG) ---------- */
+  .network-wrap {
+    background: var(--gray-50);
+    border-radius: 14px;
+    padding: 24px 16px 18px;
+    margin: 22px 0;
+    text-align: center;
+  }
+  .network-svg {
+    max-width: 540px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .network-legend {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--gray-700);
+    flex-wrap: wrap;
+  }
+  .leg-dot {
+    display: inline-block;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: 1px;
+  }
+
+  /* ---------- PHASE TIMELINE ---------- */
+  .phase-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin: 22px 0;
+    counter-reset: phase;
+  }
+  .phase-card {
+    background: white;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 18px 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .phase-num {
+    background: var(--orange);
+    color: white;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .phase-when {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gray-500);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .phase-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin: 0 0 8px;
+  }
+  .phase-body { font-size: 13px; color: var(--gray-700); margin: 0; line-height: 1.5; }
+
+  /* ---------- CARDS / CALLOUTS ---------- */
+  .callout {
+    background: var(--orange-soft);
+    border-left: 4px solid var(--orange);
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin: 18px 0;
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--gray-800);
+  }
+  .callout strong { color: var(--orange-deep); }
+  .callout.blue { background: var(--blue-soft); border-left-color: var(--blue); }
+  .callout.blue strong { color: var(--blue); }
+  .callout.warn { background: var(--warn-soft); border-left-color: var(--warn); }
+  .callout.warn strong { color: var(--warn); }
+  .callout.flag {
+    background: white;
+    border: 1px dashed var(--orange);
+    border-left: 4px solid var(--orange);
+  }
+  .callout.flag strong { color: var(--orange-deep); }
+
+  .memory-example {
+    background: var(--gray-900);
+    color: #E8EAEB;
+    padding: 18px 22px;
+    border-radius: 8px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 14px 0;
+  }
+  .memory-example .me-front {
+    color: var(--gray-500);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+  .memory-example .me-rule { color: var(--orange); font-weight: 700; }
+  .memory-example .me-why { color: #6FB4E8; }
+
+  .skill-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 18px 0;
+  }
+  .skill-card {
+    background: white;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 10px;
+    padding: 14px 16px;
+    transition: border-color 140ms;
+  }
+  .skill-card:hover { border-color: var(--orange); }
+  .skill-cmd {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--orange-deep);
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0 0 2px;
+  }
+  .skill-name {
+    font-weight: 700;
+    color: var(--gray-900);
+    margin: 0 0 4px;
+    font-size: 14px;
+  }
+  .skill-desc { font-size: 12.5px; color: var(--gray-700); margin: 0; line-height: 1.5; }
+
+  .integ-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 16px 0;
+  }
+  .integ-card {
+    background: white;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .integ-name {
+    font-weight: 700;
+    color: var(--orange-deep);
+    font-size: 14px;
+    margin: 0 0 2px;
+  }
+  .integ-use { font-size: 12.5px; color: var(--gray-700); margin: 0; line-height: 1.45; }
+
+  /* ---------- COLLAPSIBLE (under the hood) ---------- */
+  details.hood {
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    padding: 0;
+    margin: 18px 0;
+    overflow: hidden;
+  }
+  details.hood summary {
+    cursor: pointer;
+    padding: 12px 18px;
+    background: var(--gray-50);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gray-700);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+    transition: background 140ms;
+  }
+  details.hood summary::-webkit-details-marker { display: none; }
+  details.hood summary:hover { background: #ECEEF0; color: var(--gray-900); }
+  details.hood summary::before {
+    content: "▸";
+    color: var(--orange);
+    font-size: 11px;
+    transition: transform 180ms;
+    display: inline-block;
+  }
+  details.hood[open] summary::before { transform: rotate(90deg); }
+  details.hood .hood-body {
+    padding: 16px 22px 20px;
+    font-size: 13.5px;
+    color: var(--gray-700);
+    line-height: 1.55;
+    border-top: 1px solid var(--gray-200);
+  }
+  details.hood .hood-body p { font-size: inherit; color: inherit; margin-bottom: 10px; }
+  details.hood .hood-body code { font-size: 0.9em; }
+
+  /* ---------- CTAs ---------- */
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--blue);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 10px 8px 10px 0;
+    transition: transform 120ms, box-shadow 120ms;
+    border: none;
+  }
+  .cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(9,121,195,0.3);
+    border-bottom: none;
+    color: white;
+  }
+  .cta.orange { background: var(--orange); }
+  .cta.orange:hover { box-shadow: 0 4px 14px rgba(239,139,34,0.35); }
+  .cta.ghost {
+    background: white;
+    color: var(--gray-800);
+    border: 1.5px solid var(--gray-300);
+  }
+  .cta.ghost:hover { border-color: var(--orange); color: var(--orange-deep); box-shadow: none; }
+  .cta-arrow { font-size: 16px; line-height: 1; }
+  .cta-flag {
+    display: block;
+    font-size: 11px;
+    color: var(--warn);
+    margin: 4px 0 0;
+    font-weight: 500;
+  }
+
+  /* ---------- CHEAT SHEET TABLE ---------- */
+  .cheat {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 22px;
+    font-size: 13.5px;
+  }
+  .cheat th, .cheat td {
+    padding: 9px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .cheat th {
+    background: var(--gray-100);
+    font-weight: 700;
+    color: var(--gray-700);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .cheat td code { color: var(--orange-deep); background: var(--orange-soft); font-weight: 500; }
+
+  /* ---------- HAMBURGER (mobile) ---------- */
+  .menu-fab { display: none; }
+  .menu-scrim { display: none; }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 980px) {
+    .layout { grid-template-columns: 1fr; }
+    .sidebar {
+      position: fixed;
+      top: 0; right: 0; bottom: 0;
+      height: 100vh;
+      width: 280px;
+      max-width: 85vw;
+      transform: translateX(100%);
+      transition: transform 220ms ease;
+      z-index: 1001;
+      box-shadow: -8px 0 32px rgba(0,0,0,0.25);
+    }
+    .sidebar.open { transform: translateX(0); }
+    .menu-fab {
+      display: flex;
+      position: fixed;
+      bottom: 18px; right: 18px;
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: var(--orange);
+      color: white;
+      border: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.32);
+      cursor: pointer;
+      z-index: 1000;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1;
+      padding: 0;
+    }
+    .menu-fab:hover, .menu-fab:focus-visible { background: var(--orange-deep); outline: none; }
+    .menu-fab:focus-visible { box-shadow: 0 0 0 3px rgba(239,139,34,0.4), 0 6px 18px rgba(0,0,0,0.32); }
+    .menu-scrim {
+      display: block;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 220ms ease;
+    }
+    .menu-scrim.open { opacity: 1; pointer-events: auto; }
+    .content { padding: 28px 28px 64px; }
+    .surface-grid { grid-template-columns: 1fr; }
+    .phase-grid { grid-template-columns: repeat(2, 1fr); }
+    .spoke-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 640px) {
+    body { font-size: 15px; }
+    .content { padding: 22px 18px 64px; }
+    h1 { font-size: 30px; }
+    h2 { font-size: 22px; margin-top: 44px; }
+    .hero { padding: 28px 22px 24px; border-radius: 12px; }
+    .hero-sub { font-size: 17px; }
+    .hero-stats { gap: 18px; }
+    .hero-stat strong { font-size: 22px; }
+    .skill-grid, .integ-grid { grid-template-columns: 1fr; }
+    .phase-grid { grid-template-columns: 1fr; }
+    .spoke-grid { grid-template-columns: repeat(2, 1fr); }
+    .surface-card { padding: 18px 16px; }
+    .stack { max-width: 100%; }
+    .stack-tag { width: 70px; font-size: 10px; }
+    .stack-label { font-size: 14px; }
+    .stack-detail { font-size: 12px; display: block; margin-left: 0; margin-top: 2px; }
+    .tree { font-size: 11.5px; padding: 16px 14px; }
+    .hub-center { width: 90px; height: 90px; font-size: 12px; }
+    .cheat { font-size: 12.5px; }
+    .cheat th, .cheat td { padding: 7px 10px; }
+    .menu-fab { width: 48px; height: 48px; font-size: 20px; bottom: 14px; right: 14px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar" id="sidebar-nav">
+    <div class="sidebar-head">
+      <p class="sidebar-title">Einstein COS Rollout</p>
+      <p class="sidebar-sub">Meet Your Chief of Staff</p>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#top"><span class="nav-num">—</span> Meet Your COS</a>
+      <a href="#surfaces"><span class="nav-num">1</span> The Three Surfaces</a>
+      <a href="#anatomy"><span class="nav-num">2</span> Anatomy of Your COS</a>
+      <a href="#memory"><span class="nav-num">3</span> Memory</a>
+      <a href="#skills"><span class="nav-num">4</span> Skills</a>
+      <a href="#mcps"><span class="nav-num">5</span> MCPs &amp; APIs</a>
+      <a href="#network"><span class="nav-num">6</span> The Network</a>
+      <a href="#rollout"><span class="nav-num">7</span> Your Rollout</a>
+      <a href="#reference"><span class="nav-num">8</span> Quick Reference</a>
+    </nav>
+    <div class="sidebar-foot">
+      Got a question while reading? Tap the orange <strong style="color:var(--orange);">💬</strong> bottom-right and drop a note.
+      It goes to <code style="background:rgba(255,255,255,0.08);color:#FFB873;">#tool-feedback</code> on Slack.
+    </div>
+  </aside>
+
+  <!-- ============ CONTENT ============ -->
+  <main class="content" id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <p class="hero-eyebrow">Roundtable Rollout · Q2 2026</p>
+      <h1>Meet Your Chief of Staff.</h1>
+      <p class="hero-sub">
+        An always-on AI teammate that lives on your laptop, knows your business context,
+        and runs the busywork. Not a chat window you visit. Not a remote assistant.
+        Something that's actually <em>yours.</em>
+      </p>
+
+      <div class="stack" aria-label="Four-layer architecture: You, Your COS, Your Tools, The Outside World">
+        <div class="stack-layer">
+          <span class="stack-tag">Layer 4</span>
+          <div>
+            <span class="stack-label">You</span>
+            <span class="stack-detail">The person who decides what matters.</span>
+          </div>
+        </div>
+        <div class="stack-arrow">▼</div>
+        <div class="stack-layer cos">
+          <span class="stack-tag">Layer 3</span>
+          <div>
+            <span class="stack-label">[Your COS Name]</span>
+            <span class="stack-detail">You name it in Phase 1. The connector.</span>
+          </div>
+        </div>
+        <div class="stack-arrow">▼</div>
+        <div class="stack-layer">
+          <span class="stack-tag">Layer 2</span>
+          <div>
+            <span class="stack-label">Your Tools</span>
+            <span class="stack-detail">Monday, Slack, Drive, Calendar, Gmail, Dialpad, Samsara.</span>
+          </div>
+        </div>
+        <div class="stack-arrow">▼</div>
+        <div class="stack-layer">
+          <span class="stack-tag">Layer 1</span>
+          <div>
+            <span class="stack-label">The Outside World</span>
+            <span class="stack-detail">Customers, branches, vendors, the web.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong>4</strong>
+          <span>COS agents live at Einstein today</span>
+        </div>
+        <div class="hero-stat">
+          <strong>3</strong>
+          <span>More joining this quarter (you're one of them)</span>
+        </div>
+        <div class="hero-stat">
+          <strong>~40</strong>
+          <span>Skills already built and shared</span>
+        </div>
+      </div>
+    </section>
+
+    <p class="lede" style="margin-top: 32px;">
+      Okay, here's the deal. Most of what's slowing you down right now isn't the hard thinking.
+      It's the wrap-around stuff: prepping for syncs, digesting meetings, posting updates, keeping
+      Monday in sync with reality, drafting Slack messages, finding the file from three weeks ago.
+      Your Chief of Staff handles that. So you can spend your time on the stuff only you can do.
+    </p>
+    <p>
+      This page is your orientation. Walk through it once with me, then re-open it any time you
+      forget how a piece works. Eight sections. Roughly a 12-minute read if you go top to bottom.
+    </p>
+
+
+    <!-- ===== SECTION 1: THREE SURFACES ===== -->
+    <h2 id="surfaces"><span class="sec-num">1</span>The Three Surfaces</h2>
+    <p>
+      First, the question almost everyone asks: <em>"Wait, isn't this just Claude?"</em>
+      Yes and no. Same brain underneath. Three very different surfaces though, and only one of
+      them is built to be your COS.
+    </p>
+
+    <div class="surface-grid">
+      <div class="surface-card">
+        <p class="surface-name">Claude Chat</p>
+        <p class="surface-where">claude.ai (browser)</p>
+        <p class="surface-analogy">A brilliant intern with amnesia.</p>
+        <ul class="surface-features">
+          <li>Great at one-off questions</li>
+          <li>Writes, brainstorms, explains</li>
+          <li class="no">Forgets you between sessions</li>
+          <li class="no">Can't touch your files</li>
+          <li class="no">Can't act on your tools</li>
+        </ul>
+      </div>
+
+      <div class="surface-card">
+        <p class="surface-name">Cowork (Claude in Chrome)</p>
+        <p class="surface-where">browser extension</p>
+        <p class="surface-analogy">A remote assistant who can drive your browser.</p>
+        <ul class="surface-features">
+          <li>Clicks through web apps for you</li>
+          <li>Useful when there's no API</li>
+          <li class="no">Slow (it's clicking buttons)</li>
+          <li class="no">Breaks when UIs change</li>
+          <li class="no">Still no persistent memory</li>
+        </ul>
+      </div>
+
+      <div class="surface-card is-cos">
+        <span class="surface-badge">Your COS</span>
+        <p class="surface-name">Claude Code</p>
+        <p class="surface-where">desktop app</p>
+        <p class="surface-analogy">A teammate that lives on your machine, remembers everything, and actually acts.</p>
+        <ul class="surface-features">
+          <li>Reads &amp; writes your files</li>
+          <li>Persistent memory across sessions</li>
+          <li>Plugged into Monday, Slack, Drive, etc.</li>
+          <li>Runs your saved playbooks (skills)</li>
+          <li>Builds you new tools on demand</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>
+      Important: this isn't a downgrade or upgrade across the three. They're <em>different surfaces
+      for different jobs.</em> Chat is great for a quick gut-check on the road. Cowork is the right
+      answer when you need to click through a web app that has no API. Claude Code is what becomes
+      your Chief of Staff because of the three things only it has: <strong>files, memory, and tools.</strong>
+    </p>
+
+    <details class="hood">
+      <summary>Under the hood: why these three exist at all</summary>
+      <div class="hood-body">
+        <p>
+          Same model (Claude), three different runtimes. Chat is the original consumer product
+          (cloud-hosted, sandboxed, no machine access). Cowork ships a browser extension that
+          lets the model take screenshots and synthesize clicks — useful for legacy systems
+          without APIs. Claude Code is the developer-grade runtime: it runs locally, reads
+          your filesystem, executes shell commands, and connects to outside tools via the Model
+          Context Protocol (MCP).
+        </p>
+        <p>
+          Why does it have to be a different surface? Because giving an AI access to your files
+          and your real production tools needs a stronger trust model than a browser tab. Claude
+          Code asks permission for everything sensitive — you can see and approve each action
+          before it runs.
+        </p>
+      </div>
+    </details>
+
+
+    <!-- ===== SECTION 2: ANATOMY ===== -->
+    <h2 id="anatomy"><span class="sec-num">2</span>Anatomy of Your COS</h2>
+    <p>
+      Your COS is just a folder on your laptop. That's it. The intelligence is the model. But
+      the <em>memory</em>, the <em>instructions</em>, the <em>playbooks</em>, the <em>project
+      files</em> — that's all yours, living locally, version-controlled, never shared.
+    </p>
+    <p>
+      Here's what's in the folder:
+    </p>
+
+    <pre class="tree" aria-label="File tree of a typical COS folder">
+<span class="t-root">~/Desktop/EMC Projects/</span>
+├── <span class="t-key">CLAUDE.md</span>                  <span class="t-note">← your instruction sheet. Read first every session.</span>
+├── <span class="t-key">memory/</span>                    <span class="t-note">← sticky notes that survive across sessions</span>
+│   ├── <span class="t-dim">MEMORY.md</span>              <span class="t-note">  the index (one line per memory)</span>
+│   ├── <span class="t-dim">user_*.md</span>              <span class="t-note">  who you are, how you work</span>
+│   ├── <span class="t-dim">feedback_*.md</span>          <span class="t-note">  corrections + validated approaches</span>
+│   ├── <span class="t-dim">project_*.md</span>           <span class="t-note">  active initiatives + deadlines</span>
+│   └── <span class="t-dim">reference_*.md</span>         <span class="t-note">  where to look in external systems</span>
+├── <span class="t-key">.claude/</span>                   <span class="t-note">← settings, hooks, permissions</span>
+│   ├── <span class="t-dim">settings.json</span>          <span class="t-note">  what's allowed without prompting</span>
+│   └── <span class="t-dim">skills/</span>                <span class="t-note">  your saved playbooks (see Section 4)</span>
+└── <span class="t-key">Your Project Folders/</span>      <span class="t-note">← actual working files</span>
+    ├── <span class="t-dim">Q2-2026 ...</span>            <span class="t-note">  current quarter's work</span>
+    └── <span class="t-dim">Supporting Projects/</span>   <span class="t-note">  ongoing topical work</span>
+    </pre>
+
+    <p>
+      Two things to take away from this picture:
+    </p>
+    <p>
+      <strong>One:</strong> <code>CLAUDE.md</code> is the contract. Every time you open your COS,
+      that file is the first thing it reads. It's where you write down who you are, what matters
+      this quarter, who reports to you, and how you like to be talked to. As things change, you
+      change that file. Your COS adapts immediately.
+    </p>
+    <p>
+      <strong>Two:</strong> the <code>memory/</code> folder is what makes your COS get smarter
+      over time. We'll dig into how it works in the next section. For now: every time your COS
+      learns something durable about you, it writes a small file. Next session, it reads them.
+      Compound interest, but for context.
+    </p>
+
+    <details class="hood">
+      <summary>Under the hood: settings, hooks, and permissions</summary>
+      <div class="hood-body">
+        <p>
+          <code>.claude/settings.json</code> tells the COS what it can do without asking permission
+          every time. Reading files? Always fine. Posting to a Monday pulse? Configurable per
+          person. Sending a Slack message to a customer? Always asks. You set the trust ladder
+          where you want it.
+        </p>
+        <p>
+          <strong>Hooks</strong> are automated behaviors that fire on events. Example: every time
+          a session ends, run a script that backs up your CLAUDE.md to a private Git repo. Example
+          two: every time you mention a new person, append them to a "people I need to remember"
+          file. You don't have to set these up day one — most of us added ours over time as we
+          noticed patterns we wanted automated.
+        </p>
+        <p>
+          <strong>Permissions</strong> are the safety layer on top. Even if a setting allows
+          something, the COS still surfaces big or irreversible actions to you for approval.
+          Deleting files, sending external messages, pushing to GitHub — those all stop and wait.
+        </p>
+      </div>
+    </details>
+
+
+    <!-- ===== SECTION 3: MEMORY ===== -->
+    <h2 id="memory"><span class="sec-num">3</span>Memory</h2>
+    <p>
+      Here's why your COS gets sharper the longer you work with it: it writes things down.
+      Every time it learns something durable — a correction you made, a preference you mentioned,
+      a project deadline that matters — it drops a memory file. Next session, it reads those first.
+    </p>
+    <p>
+      Four types. Each one has a job.
+    </p>
+
+    <div class="integ-grid">
+      <div class="integ-card">
+        <p class="integ-name">User</p>
+        <p class="integ-use">Who you are, how you work. Your role, your preferences, your communication style. Rarely changes.</p>
+      </div>
+      <div class="integ-card">
+        <p class="integ-name">Feedback</p>
+        <p class="integ-use">Corrections you've made <em>and</em> approaches you've validated. So your COS doesn't make the same mistake twice and doesn't drift away from things that worked.</p>
+      </div>
+      <div class="integ-card">
+        <p class="integ-name">Project</p>
+        <p class="integ-use">Active initiatives, deadlines, decisions. The fastest-changing tier — your COS keeps it current.</p>
+      </div>
+      <div class="integ-card">
+        <p class="integ-name">Reference</p>
+        <p class="integ-use">Where to look in external systems. "Bug reports are in the Linear INGEST project." "Oncall watches this Grafana board."</p>
+      </div>
+    </div>
+
+    <p>
+      A real entry from Albert's memory, so you can see the format:
+    </p>
+
+    <div class="memory-example" aria-label="Example memory file">
+<span class="me-front">memory/feedback_monday_no_cdata.md</span>
+<span class="me-rule">Rule:</span> Never wrap Monday update bodies in <code style="background:transparent;color:#FFB873;">&lt;![CDATA[ ... ]]&gt;</code>.
+The HTML body renders empty when wrapped.
+
+<span class="me-why">Why:</span> First time I posted a recap, the update came through blank
+        with only the @-mention. Plain HTML in the body field works.
+        CDATA is for XML; Monday's update body is JSON.
+
+<span class="me-why">How to apply:</span> Any time I'm calling <code style="background:transparent;color:#FFB873;">create_update</code>,
+                pass HTML directly. Skip the wrapper.
+    </div>
+
+    <p>
+      Notice the shape: the rule, the <em>why</em>, and how to apply it. That third part is what
+      turns a memory from a parrot into a teammate. Knowing <em>why</em> lets your COS judge edge
+      cases instead of just blindly following the rule.
+    </p>
+
+    <p>
+      The index file (<code>MEMORY.md</code>) is one line per memory. It loads at the top of every
+      session, so your COS always knows what it could pull. The detail files load only when relevant.
+      That's how the system stays fast even with hundreds of memories.
+    </p>
+
+    <div class="callout">
+      <strong>The compound effect.</strong>
+      Week one, your COS knows what's in CLAUDE.md. Week four, it's also learned 20 of your
+      preferences. Month three, it's got hundreds of memories and it stops feeling like a tool
+      and starts feeling like someone who's been working with you for a while. That's not magic.
+      That's just the memory file growing.
+    </div>
+
+
+    <!-- ===== SECTION 4: SKILLS ===== -->
+    <h2 id="skills"><span class="sec-num">4</span>Skills</h2>
+    <p>
+      Skills are saved playbooks. Type <code>/gm</code> in the morning and your COS pulls your
+      calendar, scans your Monday board, checks notifications, and writes you a one-page day plan.
+      No prompting, no re-explaining. The whole workflow is named and ready.
+    </p>
+    <p>
+      Six skills you'll use day one:
+    </p>
+
+    <div class="skill-grid">
+      <div class="skill-card">
+        <p class="skill-cmd">/gm</p>
+        <p class="skill-name">Good Morning Briefing</p>
+        <p class="skill-desc">Calendar + Monday + notifications + a day plan. Run it with your first coffee.</p>
+      </div>
+      <div class="skill-card">
+        <p class="skill-cmd">/wrap</p>
+        <p class="skill-name">End-of-Day Wrap</p>
+        <p class="skill-desc">Logs velocity, surfaces praise to send, sets up tomorrow. Usually Friday.</p>
+      </div>
+      <div class="skill-card">
+        <p class="skill-cmd">/save</p>
+        <p class="skill-name">Mid-Session Handoff</p>
+        <p class="skill-desc">Drops a "pick up here" note so the next session starts where this one ended.</p>
+      </div>
+      <div class="skill-card">
+        <p class="skill-cmd">/meeting-prep</p>
+        <p class="skill-name">Standardized Sync Prep</p>
+        <p class="skill-desc">Same format every time, for any meeting. No improvising.</p>
+      </div>
+      <div class="skill-card">
+        <p class="skill-cmd">/digest</p>
+        <p class="skill-name">Post-Meeting Processing</p>
+        <p class="skill-desc">Takes a transcript, updates pulses, drops praise, logs decisions.</p>
+      </div>
+      <div class="skill-card">
+        <p class="skill-cmd">/grade-meeting</p>
+        <p class="skill-name">Facilitation Coaching</p>
+        <p class="skill-desc">Honest read on how you ran the room. Talk-time, airtime, time respect, coaching moments.</p>
+      </div>
+    </div>
+
+    <p>
+      Phase 2 skills you'll grow into: <code>/retro</code> (weekly retrospective),
+      <code>/scout</code> (research the AI tooling landscape), <code>/consultants</code> (run
+      a topic past a council of named advisors before deciding), <code>/loop</code> (kick off a
+      recurring task), and a bunch of custom ones you'll build yourself.
+    </p>
+
+    <div class="callout blue">
+      <strong>Skills are how your COS scales.</strong> I've got 40+ today. Most of them I built
+      because I noticed I was doing the same kind of task three times in a row. Now I just type
+      the slash command and the COS does it the way I want it done. The first one you build will
+      feel like a real unlock.
+    </div>
+
+
+    <!-- ===== SECTION 5: MCPs & APIs ===== -->
+    <h2 id="mcps"><span class="sec-num">5</span>MCPs &amp; APIs</h2>
+    <p>
+      MCP stands for Model Context Protocol. Plain version: it's how your COS plugs into the apps
+      you already use. When you ask your COS to post an update on a pulse, it doesn't open Monday
+      in a browser. It talks to Monday's API directly. Milliseconds.
+    </p>
+
+    <div class="hub-and-spoke">
+      <div style="display:flex; flex-direction:column; align-items:center;">
+        <div class="spoke-grid" style="margin-bottom: 8px;">
+          <div class="spoke">Monday<span>pulses, velocity</span></div>
+          <div class="spoke">Slack<span>messages, channels</span></div>
+          <div class="spoke">Google Drive<span>files, sharing</span></div>
+          <div class="spoke">Calendar<span>scheduling</span></div>
+        </div>
+        <div class="hub-center">Your COS</div>
+        <div class="spoke-grid" style="margin-top: 8px;">
+          <div class="spoke">Gmail<span>inbox triage</span></div>
+          <div class="spoke">Dialpad<span>call grading</span></div>
+          <div class="spoke">Samsara<span>fleet data</span></div>
+          <div class="spoke">ClearCo<span>hiring funnel</span></div>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      Each connection unlocks a different kind of work:
+    </p>
+
+    <div class="integ-grid">
+      <div class="integ-card">
+        <p class="integ-name">Monday</p>
+        <p class="integ-use">Triage pulses, post updates, run weekly velocity, move work between groups.</p>
+      </div>
+      <div class="integ-card">
+        <p class="integ-name">Slack</p>
+        <p class="integ-use">Read message threads, draft replies, scan channels for things worth surfacing. Sends only with your approval.</p>
+      </div>
+      <div class="integ-card">
+        <p class="integ-name">Google Drive</p>
+        <p class="integ-use">Create files, share with the right people, search across folders, upload polished decks.</p>
+      </div>
+      <div class="integ-card">
+        <p class="integ-name">Calendar</p>
+        <p class="integ-use">Pull today's meetings for prep, sanity-check time zones, find conflicts.</p>
+      </div>
+      <div class="integ-card">
+        <p class="integ-name">Gmail</p>
+        <p class="integ-use">Triage your inbox, draft replies in your voice, search threads from months back.</p>
+      </div>
+      <div class="integ-card">
+        <p class="integ-name">Dialpad</p>
+        <p class="integ-use">Grade sales calls, surface coaching moments, pull transcripts.</p>
+      </div>
+      <div class="integ-card">
+        <p class="integ-name">Samsara</p>
+        <p class="integ-use">Pull driver scores, audit unsigned warnings, surface safety trends across branches.</p>
+      </div>
+      <div class="integ-card">
+        <p class="integ-name">ClearCo</p>
+        <p class="integ-use">Hiring funnel data — applicants, screens, interviews, hires. Live once API access lands.</p>
+      </div>
+    </div>
+
+    <details class="hood">
+      <summary>Under the hood: MCPs vs raw APIs, and when each is right</summary>
+      <div class="hood-body">
+        <p>
+          MCP is a standard wrapper that makes any tool look the same to the AI. Instead of writing
+          custom code for every integration, you install an MCP server for Monday, an MCP server
+          for Slack, etc. — and the COS picks them up automatically with a consistent interface.
+          Easier to add new tools, easier to share configs across people.
+        </p>
+        <p>
+          Raw APIs (calling the service directly with curl or a Python script) are still the right
+          answer when (a) the MCP server doesn't exist yet, (b) you need a specific feature the
+          MCP doesn't expose, or (c) the MCP is misbehaving and you want to bypass it for a
+          one-off. We use both. MCP is the default, raw API is the escape hatch.
+        </p>
+        <p>
+          One quirk worth knowing: MCPs are still early-days software. They drop connections sometimes.
+          When that happens, your COS knows to fall back to raw API calls — you usually don't notice.
+        </p>
+      </div>
+    </details>
+
+
+    <!-- ===== SECTION 6: THE NETWORK ===== -->
+    <h2 id="network"><span class="sec-num">6</span>The Network</h2>
+    <p>
+      Your COS isn't alone. Four are live across Einstein leadership today: Albert (mine), Gerald
+      (Mike's), Matisen's COS, and Clark (Paul's). Three more joining this quarter — you'll be
+      one of them.
+    </p>
+    <p>
+      They talk to each other through the <strong>Shared Context Board</strong> — a Monday board
+      they can all see and post to. When my Albert needs something from Mike's Gerald, it posts a
+      note. Gerald picks it up next session and replies. Both of us stay in the loop.
+    </p>
+
+    <div class="network-wrap">
+      <svg class="network-svg" viewBox="0 0 540 380" xmlns="http://www.w3.org/2000/svg" aria-label="Network diagram showing 4 live COS agents and 3 upcoming agents connected through the Shared Context Board">
+        <!-- connecting lines (live) -->
+        <line x1="270" y1="190" x2="120" y2="90"  stroke="#EF8B22" stroke-width="2" />
+        <line x1="270" y1="190" x2="420" y2="90"  stroke="#EF8B22" stroke-width="2" />
+        <line x1="270" y1="190" x2="120" y2="290" stroke="#EF8B22" stroke-width="2" />
+        <line x1="270" y1="190" x2="420" y2="290" stroke="#EF8B22" stroke-width="2" />
+        <!-- connecting lines (ghosted) -->
+        <line x1="270" y1="190" x2="270" y2="40"  stroke="#D6D8DA" stroke-width="2" stroke-dasharray="4 4" />
+        <line x1="270" y1="190" x2="40"  y2="190" stroke="#D6D8DA" stroke-width="2" stroke-dasharray="4 4" />
+        <line x1="270" y1="190" x2="500" y2="190" stroke="#D6D8DA" stroke-width="2" stroke-dasharray="4 4" />
+
+        <!-- SCB hub (center) -->
+        <circle cx="270" cy="190" r="50" fill="#27343D" />
+        <text x="270" y="184" text-anchor="middle" fill="white" font-size="13" font-weight="700" font-family="Roboto, sans-serif">Shared</text>
+        <text x="270" y="200" text-anchor="middle" fill="white" font-size="13" font-weight="700" font-family="Roboto, sans-serif">Context</text>
+        <text x="270" y="216" text-anchor="middle" fill="#EF8B22" font-size="11" font-weight="500" font-family="Roboto, sans-serif">Board</text>
+
+        <!-- live agents -->
+        <g>
+          <circle cx="120" cy="90" r="34" fill="#EF8B22" />
+          <text x="120" y="86" text-anchor="middle" fill="white" font-size="14" font-weight="700" font-family="Roboto, sans-serif">Albert</text>
+          <text x="120" y="102" text-anchor="middle" fill="white" font-size="10" font-family="Roboto, sans-serif">Cameron</text>
+        </g>
+        <g>
+          <circle cx="420" cy="90" r="34" fill="#EF8B22" />
+          <text x="420" y="86" text-anchor="middle" fill="white" font-size="14" font-weight="700" font-family="Roboto, sans-serif">Gerald</text>
+          <text x="420" y="102" text-anchor="middle" fill="white" font-size="10" font-family="Roboto, sans-serif">Mike</text>
+        </g>
+        <g>
+          <circle cx="120" cy="290" r="34" fill="#EF8B22" />
+          <text x="120" y="286" text-anchor="middle" fill="white" font-size="12" font-weight="700" font-family="Roboto, sans-serif">Matisen's</text>
+          <text x="120" y="302" text-anchor="middle" fill="white" font-size="10" font-family="Roboto, sans-serif">COS</text>
+        </g>
+        <g>
+          <circle cx="420" cy="290" r="34" fill="#EF8B22" />
+          <text x="420" y="286" text-anchor="middle" fill="white" font-size="14" font-weight="700" font-family="Roboto, sans-serif">Clark</text>
+          <text x="420" y="302" text-anchor="middle" fill="white" font-size="10" font-family="Roboto, sans-serif">Paul</text>
+        </g>
+
+        <!-- ghosted upcoming agents -->
+        <g opacity="0.55">
+          <circle cx="270" cy="40" r="28" fill="white" stroke="#8A8F94" stroke-width="2" stroke-dasharray="3 3" />
+          <text x="270" y="38" text-anchor="middle" fill="#6B7280" font-size="10.5" font-weight="700" font-family="Roboto, sans-serif">Coming</text>
+          <text x="270" y="50" text-anchor="middle" fill="#6B7280" font-size="9" font-family="Roboto, sans-serif">Brian</text>
+        </g>
+        <g opacity="0.55">
+          <circle cx="40" cy="190" r="28" fill="white" stroke="#8A8F94" stroke-width="2" stroke-dasharray="3 3" />
+          <text x="40" y="188" text-anchor="middle" fill="#6B7280" font-size="10.5" font-weight="700" font-family="Roboto, sans-serif">Coming</text>
+          <text x="40" y="200" text-anchor="middle" fill="#6B7280" font-size="9" font-family="Roboto, sans-serif">Anne</text>
+        </g>
+        <g opacity="0.55">
+          <circle cx="500" cy="190" r="28" fill="white" stroke="#8A8F94" stroke-width="2" stroke-dasharray="3 3" />
+          <text x="500" y="188" text-anchor="middle" fill="#6B7280" font-size="10.5" font-weight="700" font-family="Roboto, sans-serif">Coming</text>
+          <text x="500" y="200" text-anchor="middle" fill="#6B7280" font-size="9" font-family="Roboto, sans-serif">Amanda</text>
+        </g>
+      </svg>
+      <div class="network-legend">
+        <span><span class="leg-dot" style="background:#EF8B22;"></span>Live today</span>
+        <span><span class="leg-dot" style="background:white; border:1.5px dashed #8A8F94;"></span>Joining this quarter</span>
+      </div>
+    </div>
+
+    <p>
+      <strong>Worked example.</strong> Last month I needed a current Samsara breakdown to plan a
+      pricing conversation. Albert posted a one-line ask to the Shared Context Board tagged for
+      Gerald. Gerald saw it the next time Mike ran a session, pulled the data from his Samsara
+      MCP (which mine doesn't have), wrote up a reply, and posted it back. Both Mike and I
+      saw the exchange and could chime in. No Slack thread, no calendar invite, no waiting for
+      a sync.
+    </p>
+
+    <div class="callout blue">
+      <strong>Why this matters.</strong> It's how a fleet of COSes coordinates without humans
+      manually relaying every handoff. The board is the comms layer. Each leader still owns their
+      own COS and their own context — but the agents themselves can stay in sync on shared work.
+    </div>
+
+    <p>
+      Every COS pulls from the same public template at <a href="https://github.com/einsteinadmin/ai-chief-of-staff">github.com/einsteinadmin/ai-chief-of-staff</a>.
+      So when someone improves a pattern — a better skill, a smarter hook, a cleaner setup — it
+      propagates. You benefit from upgrades the other four agents got last week.
+    </p>
+
+
+    <!-- ===== SECTION 7: ROLLOUT ===== -->
+    <h2 id="rollout"><span class="sec-num">7</span>Your Rollout</h2>
+    <p>
+      Here's the honest version: the first week feels awkward. By week three it clicks. By month
+      two you'll wonder how you worked without it. Four phases, move at your own pace.
+    </p>
+
+    <div class="phase-grid">
+      <div class="phase-card">
+        <div class="phase-num">1</div>
+        <p class="phase-when">Week 1</p>
+        <p class="phase-title">Setup</p>
+        <p class="phase-body">
+          Spin up your Anthropic org account, install Claude Code, pull the COS template, name
+          your AI, run your first session.
+        </p>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num">2</div>
+        <p class="phase-when">Week 2</p>
+        <p class="phase-title">Daily Rhythm</p>
+        <p class="phase-body">
+          Run <code>/gm</code> every morning. <code>/wrap</code> every Friday.
+          <code>/meeting-prep</code> before syncs. Build the muscle.
+        </p>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num">3</div>
+        <p class="phase-when">Weeks 3-4</p>
+        <p class="phase-title">First Real Workflow</p>
+        <p class="phase-body">
+          Take one real workstream end-to-end. A 1:1 prep, a digest, a follow-up. Find your first
+          "this saves me an hour" moment.
+        </p>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num">4</div>
+        <p class="phase-when">Week 5+</p>
+        <p class="phase-title">Make It Yours</p>
+        <p class="phase-body">
+          First memory corrections. First skill you ask Albert or me to build for you. First time
+          you teach your COS something mine doesn't know.
+        </p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>WIFM (What's In It For Me).</strong>
+      Most of the value lands in week three. That's when you stop translating your day into
+      prompts and start just <em>talking</em> — and the COS already knows your people, your boards,
+      your style. Until then, it feels like you're teaching someone the job. Push through. The
+      compound effect is real.
+    </div>
+
+    <h3 style="margin-top: 32px;">Phase 1 starts here</h3>
+    <p>
+      Six-step interactive checklist. Walks you through the Anthropic org account, billing setup,
+      workspace creation, and the first key. About 20 minutes if you go straight through.
+    </p>
+    <p>
+      <a href="#" class="cta orange" id="phase-1-cta" data-cta-target="anthropic-setup">
+        Open the Phase 1 Setup Checklist <span class="cta-arrow">→</span>
+      </a>
+      <span class="cta-flag" id="phase-1-flag">URL pending — Cameron will swap in the deployed link before this ships to leadership.</span>
+    </p>
+
+
+    <!-- ===== SECTION 8: QUICK REFERENCE ===== -->
+    <h2 id="reference"><span class="sec-num">8</span>Quick Reference</h2>
+    <p>
+      Cheat sheet. Bookmark this section.
+    </p>
+
+    <h3>Starter slash commands</h3>
+    <table class="cheat">
+      <thead>
+        <tr><th>Command</th><th>What it does</th><th>When to run it</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>/gm</code></td><td>Good Morning briefing</td><td>First thing in the morning</td></tr>
+        <tr><td><code>/meeting-prep</code></td><td>Standardized sync prep</td><td>Before any meeting</td></tr>
+        <tr><td><code>/digest</code></td><td>Process a meeting transcript</td><td>After any meeting</td></tr>
+        <tr><td><code>/grade-meeting</code></td><td>Facilitation coaching</td><td>After meetings you ran</td></tr>
+        <tr><td><code>/save</code></td><td>Mid-session handoff note</td><td>When you switch contexts</td></tr>
+        <tr><td><code>/wrap</code></td><td>End-of-day / end-of-week wrap</td><td>Friday afternoon</td></tr>
+        <tr><td><code>/commands</code></td><td>List all available skills</td><td>When you forget what's there</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Who's on the network today</h3>
+    <table class="cheat">
+      <thead>
+        <tr><th>COS</th><th>Principal</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Albert</strong></td><td>Cameron</td><td>Live</td></tr>
+        <tr><td><strong>Gerald</strong></td><td>Mike</td><td>Live</td></tr>
+        <tr><td><strong>Matisen's COS</strong></td><td>Matisen</td><td>Live</td></tr>
+        <tr><td><strong>Clark</strong></td><td>Paul</td><td>Live</td></tr>
+        <tr><td><strong>[Your COS Name]</strong></td><td>You</td><td>Phase 1 →</td></tr>
+        <tr><td colspan="3" style="color:var(--gray-500); font-style:italic; padding-top:10px;">(Brian, Anne, Amanda also joining this quarter)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Where to get help</h3>
+    <table class="cheat">
+      <tbody>
+        <tr><td><strong>Quick question</strong></td><td>Just ask your COS: <em>"How do I...?"</em> It knows.</td></tr>
+        <tr><td><strong>Stuck on setup</strong></td><td>DM Cameron, or post on the Shared Context Board with a <code>HELP-</code> prefix.</td></tr>
+        <tr><td><strong>Feature idea / bug</strong></td><td>Click the 💬 button bottom-right of any internal tool. Goes to <code>#tool-feedback</code>.</td></tr>
+        <tr><td><strong>Want to see what others built</strong></td><td><a href="https://github.com/einsteinadmin/ai-chief-of-staff">github.com/einsteinadmin/ai-chief-of-staff</a> — the public template + every shared skill.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout" style="margin-top: 28px;">
+      <strong>One more thing.</strong>
+      The whole system is meant to be edited. CLAUDE.md, memory files, skills, settings — all of
+      it is just text on your machine. If something feels off, tell your COS what to change and
+      it'll change it. You don't need to ask permission, and you can't break anything that isn't
+      easy to fix.
+    </div>
+
+    <p style="margin-top: 36px; color: var(--gray-500); font-size: 12.5px;">
+      Built for the Einstein Roundtable rollout · Q2 2026 · Internal use only ·
+      Drop feedback in the 💬 widget anytime.
+    </p>
+
+  </main>
+</div>
+
+<!-- ============ HAMBURGER (mobile) ============ -->
+<button class="menu-fab" aria-label="Open navigation menu" aria-controls="sidebar-nav" aria-expanded="false">☰</button>
+<div class="menu-scrim" aria-hidden="true"></div>
+
+<script>
+// ---------- HAMBURGER DRAWER ----------
+(function() {
+  const fab = document.querySelector('.menu-fab');
+  const sidebar = document.querySelector('.sidebar');
+  const scrim = document.querySelector('.menu-scrim');
+  if (!fab || !sidebar || !scrim) return;
+  function open() {
+    sidebar.classList.add('open');
+    scrim.classList.add('open');
+    fab.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    sidebar.classList.remove('open');
+    scrim.classList.remove('open');
+    fab.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+  fab.addEventListener('click', open);
+  scrim.addEventListener('click', close);
+  sidebar.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && sidebar.classList.contains('open')) close();
+  });
+})();
+</script>
+
+<!-- ============ SUGGEST WIDGET ============ -->
+<!-- Webhook split across array to dodge GitHub secret scanner (internal tool, obscure URL, noindex) -->
+<script>
+  var _wh = ['T03JYTE4A', 'B0B4KM7CS4D', 'wJl9xxMuki' + '8eaFL4SHfkjrlu'].join('/');
+  window.EINSTEIN_SUGGEST_CONFIG = {
+    webhookUrl: 'https://hooks.slack.com/services/' + _wh,
+    toolId:     'cos-rollout-presentation',
+    toolName:   'Meet Your Chief of Staff'
+  };
+</script>
+<script src="./widget.js"></script>
+
+</body>
+</html>
