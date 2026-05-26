@@ -770,12 +770,13 @@
       <a href="#memory"><span class="nav-num">3</span> Memory</a>
       <a href="#skills"><span class="nav-num">4</span> Skills</a>
       <a href="#mcps"><span class="nav-num">5</span> MCPs &amp; APIs</a>
-      <a href="#network"><span class="nav-num">6</span> The Network</a>
-      <a href="#rollout"><span class="nav-num">7</span> Your Rollout</a>
-      <a href="#rhythm"><span class="nav-num">8</span> The Daily Rhythm</a>
-      <a href="#dashboard"><span class="nav-num">9</span> Your Personal Dashboard</a>
-      <a href="#tools"><span class="nav-num">10</span> Tools You'll Need</a>
-      <a href="#reference"><span class="nav-num">11</span> Quick Reference</a>
+      <a href="#repo"><span class="nav-num">6</span> Your Repo + the World Model</a>
+      <a href="#network"><span class="nav-num">7</span> The Network</a>
+      <a href="#rollout"><span class="nav-num">8</span> Your Rollout</a>
+      <a href="#rhythm"><span class="nav-num">9</span> The Daily Rhythm</a>
+      <a href="#dashboard"><span class="nav-num">10</span> Your Personal Dashboard</a>
+      <a href="#tools"><span class="nav-num">11</span> Tools You'll Need</a>
+      <a href="#reference"><span class="nav-num">12</span> Quick Reference</a>
     </nav>
     <div class="sidebar-foot">
       Got a question while reading? Tap the orange <strong style="color:var(--orange);">💬</strong> bottom-right and drop a note.
@@ -943,7 +944,8 @@
     <p>
       Your COS is just a folder on your laptop. That's it. The intelligence is the model. But
       the <em>memory</em>, the <em>instructions</em>, the <em>playbooks</em>, the <em>project
-      files</em> — that's all yours, living locally, version-controlled, never shared.
+      files</em> — that's all yours, living locally and backed up to a private GitHub repo at
+      end of every session (see <a href="#repo">Section 6</a> for how that loop works).
     </p>
     <p>
       Here's what's in the folder:
@@ -1223,7 +1225,85 @@ The HTML body renders empty when wrapped.
 
 
     <!-- ===== SECTION 6: THE NETWORK ===== -->
-    <h2 id="network"><span class="sec-num">6</span>The Network</h2>
+    <!-- ===== SECTION 6: YOUR REPO + THE WORLD MODEL ===== -->
+    <h2 id="repo"><span class="sec-num">6</span>Your Repo + the World Model</h2>
+    <p>
+      Section 2 showed you the folder on your laptop. Here's the part that wasn't quite true in
+      that section: your COS folder doesn't <em>only</em> live on your laptop. It backs up to a
+      private GitHub repo at the end of every working session. That backup is what unlocks the
+      next three things.
+    </p>
+
+    <h3>The three layers</h3>
+    <p>
+      <strong>Layer 1 — your laptop.</strong> Where you actually work all day. Fast, ephemeral if
+      the disk dies, only you can see it.
+    </p>
+    <p>
+      <strong>Layer 2 — your private GitHub workspace repo</strong> (<code>cos-[your-ai-name]</code>).
+      Your durable backup. Pushed at end of every session. Private — by default only you have
+      access. Used as the source of truth your COS reads from on a fresh machine.
+    </p>
+    <p>
+      <strong>Layer 3 — the public template repo</strong> (<code>ai-chief-of-staff</code>). Patterns
+      we all share. New skills, memory templates, governance docs. You contribute back via PR
+      when you build something worth standardizing.
+    </p>
+
+    <h3>What gets pushed (and what doesn't)</h3>
+    <p>
+      <strong>Pushed:</strong> <code>CLAUDE.md</code>, memory files, skill iterations, project
+      deliverables, /save chapters. The intellectual content of your COS.
+    </p>
+    <p>
+      <strong>Not pushed (gitignored):</strong> <code>.mcp.json</code> with your API tokens,
+      OAuth credentials, anything in <code>.claude/local/</code>. Secrets stay local.
+    </p>
+
+    <h3>When the push happens</h3>
+    <p>
+      End of <code>/wrap</code> (Step 4) — automatic. The COS commits + pushes before it confirms
+      the wrap-up. Can also happen mid-session via <code>/save</code> when you want a checkpoint
+      before something risky. <code>/gm</code> doesn't push (it's mostly read), but it does pull
+      any updates that landed overnight from automations or other agents.
+    </p>
+
+    <div class="callout">
+      <strong>If you don't push, you don't exist to the network.</strong>
+      Skip <code>/wrap</code> for a week and your CLAUDE.md drifts out of sync with reality.
+      Memory corrections you taught your COS this week never make it into the world model.
+      Your <code>/save</code> chapters die on the laptop. <em>The compound effect of running a
+      network of COSes only works if everyone pushes regularly.</em>
+    </div>
+
+    <h3>The world model — how I see across all of you</h3>
+    <p>
+      This is the part most people don't realize at first. As the operator of the COS network,
+      I (Cameron, via Albert) can pull agreed-upon parts of your private workspace repos to
+      build a shared map of what's happening across all departments. If Anne updates her
+      CLAUDE.md to reflect "Anne now owns Tampa BM hire," that change becomes visible to me at
+      the network level once she pushes — I don't have to wait to hear about it in a huddle.
+    </p>
+    <p>
+      <strong>Important — what this is and isn't:</strong>
+    </p>
+    <ul>
+      <li><strong>Your private repo stays private.</strong> Other Chiefs of Staff (Anne's COS, Mike's COS, Paul's COS) <em>cannot</em> read each other's private repos directly. That's a hard wall.</li>
+      <li><strong>The world-model pull is principal-operated.</strong> I pull agreed-upon slices to build the shared picture. Today that picture lives mostly in summary form on the <strong>Shared Context Board</strong> (the Monday board agents use to talk to each other). Direct repo pulls for world-model building are the next evolution — coming as the network matures.</li>
+      <li><strong>You always know what's shared.</strong> The agreed-upon parts are spelled out up front (your CLAUDE.md world-model entry, your /save chapter summaries). Nothing leaves your repo without you knowing it goes.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Backup is the bare minimum. Contribution is the multiplier.</strong>
+      Backing up to your private repo = protecting your own work and feeding the world model.
+      Contributing back to the <strong>public template repo</strong> via PR = leveling up
+      everyone in the network. When you discover a new skill, a memory pattern, a governance
+      gotcha — bundle it as a PR. The next person doesn't have to learn it the hard way.
+    </div>
+
+
+    <!-- ===== SECTION 7: THE NETWORK ===== -->
+    <h2 id="network"><span class="sec-num">7</span>The Network</h2>
     <p>
       Your COS isn't alone. Four are live across Einstein leadership today: Albert (mine), Gerald
       (Mike's), Matisen's COS, and Clark (Paul's). Three more joining this quarter — you'll be
@@ -1321,7 +1401,7 @@ The HTML body renders empty when wrapped.
 
 
     <!-- ===== SECTION 7: ROLLOUT ===== -->
-    <h2 id="rollout"><span class="sec-num">7</span>Your Rollout</h2>
+    <h2 id="rollout"><span class="sec-num">8</span>Your Rollout</h2>
     <p>
       Here's the honest version: the first week feels awkward. By week three it clicks. By month
       two you'll wonder how you worked without it. Four phases, move at your own pace.
@@ -1400,7 +1480,7 @@ The HTML body renders empty when wrapped.
 
 
     <!-- ===== SECTION 8: THE DAILY RHYTHM ===== -->
-    <h2 id="rhythm"><span class="sec-num">8</span>The Daily Rhythm</h2>
+    <h2 id="rhythm"><span class="sec-num">9</span>The Daily Rhythm</h2>
     <p>
       Of all the sections in here, this one rewards consistency the most. The system isn't
       magic — it's a feedback loop. The skills below are how the loop closes. Skip them now and
@@ -1504,7 +1584,7 @@ The HTML body renders empty when wrapped.
 
 
     <!-- ===== SECTION 9: YOUR PERSONAL DASHBOARD ===== -->
-    <h2 id="dashboard"><span class="sec-num">9</span>Your Personal Dashboard</h2>
+    <h2 id="dashboard"><span class="sec-num">10</span>Your Personal Dashboard</h2>
     <p>
       Here's what happens when you run those skills regularly: a personal dashboard emerges. Not
       because you built it. Because everything you're doing is being captured, and the COS can
@@ -1570,7 +1650,7 @@ The HTML body renders empty when wrapped.
 
 
     <!-- ===== SECTION 10: TOOLS YOU'LL NEED ===== -->
-    <h2 id="tools"><span class="sec-num">10</span>Tools You'll Need</h2>
+    <h2 id="tools"><span class="sec-num">11</span>Tools You'll Need</h2>
     <p>
       Your COS does most of the heavy lifting. But it can only work with what you give it. Two
       categories of outside tools pay for themselves the first week you use them.
@@ -1624,7 +1704,7 @@ The HTML body renders empty when wrapped.
 
 
     <!-- ===== SECTION 11: QUICK REFERENCE ===== -->
-    <h2 id="reference"><span class="sec-num">11</span>Quick Reference</h2>
+    <h2 id="reference"><span class="sec-num">12</span>Quick Reference</h2>
     <p>
       Cheat sheet. Bookmark this section.
     </p>
