@@ -770,12 +770,14 @@
       <a href="#memory"><span class="nav-num">3</span> Memory</a>
       <a href="#skills"><span class="nav-num">4</span> Skills</a>
       <a href="#mcps"><span class="nav-num">5</span> MCPs &amp; APIs</a>
-      <a href="#network"><span class="nav-num">6</span> The Network</a>
-      <a href="#rollout"><span class="nav-num">7</span> Your Rollout</a>
-      <a href="#rhythm"><span class="nav-num">8</span> The Daily Rhythm</a>
-      <a href="#dashboard"><span class="nav-num">9</span> Your Personal Dashboard</a>
-      <a href="#tools"><span class="nav-num">10</span> Tools You'll Need</a>
-      <a href="#reference"><span class="nav-num">11</span> Quick Reference</a>
+      <a href="#repo"><span class="nav-num">6</span> Your Repo + the World Model</a>
+      <a href="#network"><span class="nav-num">7</span> The Network</a>
+      <a href="#rollout"><span class="nav-num">8</span> Your Rollout</a>
+      <a href="#rhythm"><span class="nav-num">9</span> The Daily Rhythm</a>
+      <a href="#dashboard"><span class="nav-num">10</span> Your Personal Dashboard</a>
+      <a href="#tools"><span class="nav-num">11</span> Tools You'll Need</a>
+      <a href="#reference"><span class="nav-num">12</span> Quick Reference</a>
+      <a href="#tips"><span class="nav-num">13</span> Tips &amp; FAQ</a>
     </nav>
     <div class="sidebar-foot">
       Got a question while reading? Tap the orange <strong style="color:var(--orange);">💬</strong> bottom-right and drop a note.
@@ -943,7 +945,8 @@
     <p>
       Your COS is just a folder on your laptop. That's it. The intelligence is the model. But
       the <em>memory</em>, the <em>instructions</em>, the <em>playbooks</em>, the <em>project
-      files</em> — that's all yours, living locally, version-controlled, never shared.
+      files</em> — that's all yours, living locally and backed up to a private GitHub repo at
+      end of every session (see <a href="#repo">Section 6</a> for how that loop works).
     </p>
     <p>
       Here's what's in the folder:
@@ -1223,7 +1226,85 @@ The HTML body renders empty when wrapped.
 
 
     <!-- ===== SECTION 6: THE NETWORK ===== -->
-    <h2 id="network"><span class="sec-num">6</span>The Network</h2>
+    <!-- ===== SECTION 6: YOUR REPO + THE WORLD MODEL ===== -->
+    <h2 id="repo"><span class="sec-num">6</span>Your Repo + the World Model</h2>
+    <p>
+      Section 2 showed you the folder on your laptop. Here's the part that wasn't quite true in
+      that section: your COS folder doesn't <em>only</em> live on your laptop. It backs up to a
+      private GitHub repo at the end of every working session. That backup is what unlocks the
+      next three things.
+    </p>
+
+    <h3>The three layers</h3>
+    <p>
+      <strong>Layer 1 — your laptop.</strong> Where you actually work all day. Fast, ephemeral if
+      the disk dies, only you can see it.
+    </p>
+    <p>
+      <strong>Layer 2 — your private GitHub workspace repo</strong> (<code>cos-[your-ai-name]</code>).
+      Your durable backup. Pushed at end of every session. Private — by default only you have
+      access. Used as the source of truth your COS reads from on a fresh machine.
+    </p>
+    <p>
+      <strong>Layer 3 — the public template repo</strong> (<code>ai-chief-of-staff</code>). Patterns
+      we all share. New skills, memory templates, governance docs. You contribute back via PR
+      when you build something worth standardizing.
+    </p>
+
+    <h3>What gets pushed (and what doesn't)</h3>
+    <p>
+      <strong>Pushed:</strong> <code>CLAUDE.md</code>, memory files, skill iterations, project
+      deliverables, /save chapters. The intellectual content of your COS.
+    </p>
+    <p>
+      <strong>Not pushed (gitignored):</strong> <code>.mcp.json</code> with your API tokens,
+      OAuth credentials, anything in <code>.claude/local/</code>. Secrets stay local.
+    </p>
+
+    <h3>When the push happens</h3>
+    <p>
+      End of <code>/wrap</code> (Step 4) — automatic. The COS commits + pushes before it confirms
+      the wrap-up. Can also happen mid-session via <code>/save</code> when you want a checkpoint
+      before something risky. <code>/gm</code> doesn't push (it's mostly read), but it does pull
+      any updates that landed overnight from automations or other agents.
+    </p>
+
+    <div class="callout">
+      <strong>If you don't push, you don't exist to the network.</strong>
+      Skip <code>/wrap</code> for a week and your CLAUDE.md drifts out of sync with reality.
+      Memory corrections you taught your COS this week never make it into the world model.
+      Your <code>/save</code> chapters die on the laptop. <em>The compound effect of running a
+      network of COSes only works if everyone pushes regularly.</em>
+    </div>
+
+    <h3>The world model — how I see across all of you</h3>
+    <p>
+      This is the part most people don't realize at first. As the operator of the COS network,
+      I (Cameron, via Albert) can pull agreed-upon parts of your private workspace repos to
+      build a shared map of what's happening across all departments. If Anne updates her
+      CLAUDE.md to reflect "Anne now owns Tampa BM hire," that change becomes visible to me at
+      the network level once she pushes — I don't have to wait to hear about it in a huddle.
+    </p>
+    <p>
+      <strong>Important — what this is and isn't:</strong>
+    </p>
+    <ul>
+      <li><strong>Your private repo stays private.</strong> Other Chiefs of Staff (Anne's COS, Mike's COS, Paul's COS) <em>cannot</em> read each other's private repos directly. That's a hard wall.</li>
+      <li><strong>The world-model pull is principal-operated.</strong> I pull agreed-upon slices to build the shared picture. Today that picture lives mostly in summary form on the <strong>Shared Context Board</strong> (the Monday board agents use to talk to each other). Direct repo pulls for world-model building are the next evolution — coming as the network matures.</li>
+      <li><strong>You always know what's shared.</strong> The agreed-upon parts are spelled out up front (your CLAUDE.md world-model entry, your /save chapter summaries). Nothing leaves your repo without you knowing it goes.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Backup is the bare minimum. Contribution is the multiplier.</strong>
+      Backing up to your private repo = protecting your own work and feeding the world model.
+      Contributing back to the <strong>public template repo</strong> via PR = leveling up
+      everyone in the network. When you discover a new skill, a memory pattern, a governance
+      gotcha — bundle it as a PR. The next person doesn't have to learn it the hard way.
+    </div>
+
+
+    <!-- ===== SECTION 7: THE NETWORK ===== -->
+    <h2 id="network"><span class="sec-num">7</span>The Network</h2>
     <p>
       Your COS isn't alone. Four are live across Einstein leadership today: Albert (mine), Gerald
       (Mike's), Matisen's COS, and Clark (Paul's). Three more joining this quarter — you'll be
@@ -1321,11 +1402,23 @@ The HTML body renders empty when wrapped.
 
 
     <!-- ===== SECTION 7: ROLLOUT ===== -->
-    <h2 id="rollout"><span class="sec-num">7</span>Your Rollout</h2>
+    <h2 id="rollout"><span class="sec-num">8</span>Your Rollout</h2>
     <p>
       Here's the honest version: the first week feels awkward. By week three it clicks. By month
       two you'll wonder how you worked without it. Four phases, move at your own pace.
     </p>
+
+    <div class="callout" style="margin-bottom: 20px;">
+      <strong>Treat your COS like a new hire, not a tool.</strong>
+      The single biggest predictor of whether this works is whether you invest in your COS the way
+      you would a new employee. New hires spend their first 90 days getting corrected, learning
+      how you write, figuring out what to escalate vs. just handle, slowly absorbing your
+      judgment. Your COS works the same way — memory files are how it captures corrections, skill
+      iteration is how it learns your patterns, the daily rhythm is how you stay in touch. Treat
+      it like a chatbot you check occasionally and you'll get chatbot output. Treat it like the
+      smartest new hire you've ever had — one who never forgets a correction — and you'll get a
+      multiplier on everything you do. <em>Agents need humans who care about them.</em>
+    </div>
 
     <div class="phase-grid">
       <div class="phase-card">
@@ -1376,19 +1469,19 @@ The HTML body renders empty when wrapped.
 
     <h3 style="margin-top: 32px;">Phase 1 starts here</h3>
     <p>
-      Six-step interactive checklist. Walks you through the Anthropic org account, billing setup,
-      workspace creation, and the first key. About 20 minutes if you go straight through.
+      Short doc with the handful of things to knock out before our onboarding session — free
+      GitHub account, Monday API token, a context dump from your existing Claude Chat. About
+      30 minutes solo. Do it ASAP so we can move fast when we sit down.
     </p>
     <p>
-      <a href="#" class="cta orange" id="phase-1-cta" data-cta-target="anthropic-setup">
-        Open the Phase 1 Setup Checklist <span class="cta-arrow">→</span>
+      <a href="https://github.com/einsteinadmin/ai-chief-of-staff/blob/main/00-onboarding/PRE-SESSION-PREP.md" class="cta orange" id="phase-1-cta" data-cta-target="pre-session-prep" target="_blank" rel="noopener">
+        Open the Pre-Session Prep Doc <span class="cta-arrow">→</span>
       </a>
-      <span class="cta-flag" id="phase-1-flag">URL pending — Cameron will swap in the deployed link before this ships to leadership.</span>
     </p>
 
 
     <!-- ===== SECTION 8: THE DAILY RHYTHM ===== -->
-    <h2 id="rhythm"><span class="sec-num">8</span>The Daily Rhythm</h2>
+    <h2 id="rhythm"><span class="sec-num">9</span>The Daily Rhythm</h2>
     <p>
       Of all the sections in here, this one rewards consistency the most. The system isn't
       magic — it's a feedback loop. The skills below are how the loop closes. Skip them now and
@@ -1492,7 +1585,7 @@ The HTML body renders empty when wrapped.
 
 
     <!-- ===== SECTION 9: YOUR PERSONAL DASHBOARD ===== -->
-    <h2 id="dashboard"><span class="sec-num">9</span>Your Personal Dashboard</h2>
+    <h2 id="dashboard"><span class="sec-num">10</span>Your Personal Dashboard</h2>
     <p>
       Here's what happens when you run those skills regularly: a personal dashboard emerges. Not
       because you built it. Because everything you're doing is being captured, and the COS can
@@ -1558,7 +1651,7 @@ The HTML body renders empty when wrapped.
 
 
     <!-- ===== SECTION 10: TOOLS YOU'LL NEED ===== -->
-    <h2 id="tools"><span class="sec-num">10</span>Tools You'll Need</h2>
+    <h2 id="tools"><span class="sec-num">11</span>Tools You'll Need</h2>
     <p>
       Your COS does most of the heavy lifting. But it can only work with what you give it. Two
       categories of outside tools pay for themselves the first week you use them.
@@ -1612,7 +1705,7 @@ The HTML body renders empty when wrapped.
 
 
     <!-- ===== SECTION 11: QUICK REFERENCE ===== -->
-    <h2 id="reference"><span class="sec-num">11</span>Quick Reference</h2>
+    <h2 id="reference"><span class="sec-num">12</span>Quick Reference</h2>
     <p>
       Cheat sheet. Bookmark this section.
     </p>
@@ -1665,6 +1758,96 @@ The HTML body renders empty when wrapped.
       it'll change it. You don't need to ask permission, and you can't break anything that isn't
       easy to fix.
     </div>
+
+    <h2 id="tips"><span class="sec-num">13</span>Tips &amp; FAQ</h2>
+    <p>
+      A living list of the habits and gotchas that make your COS actually pay off — gathered from
+      real onboarding sessions across the team. New ones get added as we learn them and trickle out
+      to everyone via the Shared Context Board. Skim it now; come back when something feels off.
+    </p>
+
+    <style>
+      .faq-item { border: 1px solid var(--gray-200, #e5e7eb); border-radius: 10px; margin: 10px 0; overflow: hidden; }
+      .faq-item > summary { cursor: pointer; padding: 14px 18px; font-weight: 600; list-style: none; }
+      .faq-item > summary::-webkit-details-marker { display: none; }
+      .faq-item > summary::before { content: "＋"; color: var(--orange, #EF8B22); font-weight: 700; margin-right: 10px; }
+      .faq-item[open] > summary::before { content: "－"; }
+      .faq-item > div { padding: 2px 18px 16px; color: var(--gray-600, #4b5563); line-height: 1.55; }
+      .faq-item > div code { background: var(--gray-100, #f1f3f5); padding: 1px 5px; border-radius: 4px; }
+    </style>
+
+    <details class="faq-item" open>
+      <summary>The #1 habit: run /save and /wrap — "running /gm" alone saves nothing</summary>
+      <div>
+        Your agent does <strong>not</strong> auto-save. Until you run <code>/save</code> or <code>/wrap</code>,
+        your work stays trapped in that one chat session — it never writes to the agent's memory, never updates
+        your project files, never posts to your Monday board, and never pushes to GitHub. <code>/save</code> is a
+        mid-session checkpoint; <code>/wrap</code> is the end-of-day close (board sanity check + full backup).
+        Run <code>/save</code> after finishing a task, and <code>/wrap</code> before you log off. This is the single
+        biggest thing that separates a COS that gets smarter every day from one that starts blind every morning.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Pin your active sessions; don't unpin until you've saved</summary>
+      <div>
+        Pin the sessions you're actively working — treat that pinned area as your "today" folder. <strong>Don't unpin
+        a session until you've saved it</strong> (unpinning before saving loses that work from the agent's memory).
+        Once a task is done and saved, unpin it — your "recents" list then works like a "done" archive.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Click into the actions your COS takes — that's how you learn to steer it</summary>
+      <div>
+        When the agent runs, click into the "Ran command," "Edited file," etc. lines. You'll see <em>how</em> it writes
+        to memory, updates pulses, and what steps it takes — and you'll catch it before it does something you didn't
+        intend. Watching the work is the fastest way to get good at directing it.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Once you're saving, trust your COS to update Monday — drop the manual habit</summary>
+      <div>
+        Tell it your game plan for the day and let it move pulses, mark things done, and post recaps. Managing the board
+        by hand defeats the point. (This only works if you're saving — see tip #1.)
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Give your COS your history — point it at your Claude chat-export folder</summary>
+      <div>
+        Export your old Claude conversations and point your agent at the folder once. It'll pull in context from before
+        it existed — projects, decisions, people — and start with a running head start instead of a blank slate.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Multi-device? Keep iCloud healthy</summary>
+      <div>
+        Your COS project files live locally, so to use the same COS across two Macs the project folder has to sync via
+        iCloud — which means <strong>a full iCloud account silently blocks syncing</strong>. Keep iCloud storage clear and
+        make sure your project folder sits in an iCloud-synced directory.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Your COS handles git itself — you shouldn't touch GitHub Desktop day-to-day</summary>
+      <div>
+        Pull and push happen automatically inside <code>/save</code> and <code>/wrap</code>. GitHub Desktop is only used
+        once during setup. (Behind the scenes, an SSH key gets wired up during onboarding so the agent can push/pull on
+        its own — even on a Mac where you're not an admin.)
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Talk to it — dictation makes the whole thing click</summary>
+      <div>
+        The COS is conversational, and the richer your input the better the output — so talking beats typing.
+        <strong>Wispr Flow</strong> (Control+Space) is the recommended dictation tool: it formats as you speak (numbered
+        lists and all) and works in any text field. Turn on privacy mode during setup.
+      </div>
+    </details>
 
     <p style="margin-top: 36px; color: var(--gray-500); font-size: 12.5px;">
       Built for the Einstein Roundtable rollout · Q2 2026 · Internal use only ·
