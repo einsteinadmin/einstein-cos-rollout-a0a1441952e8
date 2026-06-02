@@ -1878,8 +1878,16 @@ The HTML body renders empty when wrapped.
       Everything public-facing lives in one obscure GitHub Pages repo (<code>einstein-cos-matrix-*</code>) — the matrix HTML at root, each leader's dashboard + status.json in a subfolder named after their COS. Your COS clones that repo, edits your subfolder on /wrap, pushes. Within ~30 seconds the deployed matrix and org dashboard reflect your change.
     </p>
 
+    <h3 style="margin-top: 24px;">Bootstrapping into the network</h3>
+    <p>
+      When your COS comes online, it doesn't invent your rocks — it translates Cameron's existing tracking of your rocks (already in his goals-dashboard) into your status.json schema, then walks you through filling in the new fields (confidence, blockers, milestones, etc.). One-time, ~15 minutes, done at your first /wrap.
+    </p>
+    <p>
+      Step-by-step walkthrough lives at <a href="https://einsteinadmin.github.io/einstein-cos-matrix-059563b8c478/BOOTSTRAP.md" target="_blank" style="color: var(--einstein-blue, #0979C3); font-weight: 600;">BOOTSTRAP.md</a> in the matrix deploy repo — your COS should read it before your first /wrap on the network.
+    </p>
+
     <p style="margin-top: 18px; font-size: 13px; color: var(--gray-500);">
-      Implementation plan + decisions log: see <code>AI Operating System/cos-network-v2-plan.html</code>. Full content for this section ships at Phase 1 kickoff.
+      Implementation plan + decisions log: see <code>AI Operating System/cos-network-v2-plan.html</code> in Cameron's workspace. Full content for this section ships at Phase 1 kickoff.
     </p>
 
     <p style="margin-top: 36px; color: var(--gray-500); font-size: 12.5px;">
