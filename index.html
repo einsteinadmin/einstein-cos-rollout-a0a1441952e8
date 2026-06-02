@@ -1849,6 +1849,39 @@ The HTML body renders empty when wrapped.
       </div>
     </details>
 
+    <h2 id="status-network"><span class="sec-num">14</span>Your Status File + the Network</h2>
+    <div style="background: linear-gradient(180deg, #fff7ee, transparent); border-left: 4px solid #EF8B22; padding: 14px 18px; border-radius: 8px; margin: 12px 0 18px;">
+      <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #C96A0E; margin-bottom: 6px;">Phase 1 — placeholder · rolling out this week</div>
+      <p style="margin: 0; font-size: 14.5px;">
+        This section is reserved while Cameron dogfoods the pattern (Phase 0.5). Full content lands here once Phase 0.5 calibration completes and the language reflects what actually works — not what we hoped. Stub below covers the shape.
+      </p>
+    </div>
+
+    <p>
+      Each leader's COS publishes a structured <code>status.json</code> at their root — a small JSON file tracking your rocks (status · confidence · blockers · milestones · % complete), plus what template patterns and SCB announcements your COS has adopted. It is the single source of truth for your slice of the network.
+    </p>
+
+    <h3 style="margin-top: 24px;">Who maintains it</h3>
+    <p>
+      Your COS drafts every change. At <code>/wrap</code>, before the push fires, your COS reads back the proposed delta in plain English — <em>"I'm about to push Personnel Mgmt → Super Green (was Green), confidence 4, reason: 4 managers at B+ in the 5/30 calibration. Approve / Edit / Hold?"</em> — and you approve, edit, or hold each item. The gate gets lighter as your COS calibrates: <strong>full gate weeks 1–2 → material-change-only weeks 3–6 → trust-by-default at steady state.</strong> Friday <code>/wrap</code> always does a deeper pass.
+    </p>
+
+    <h3 style="margin-top: 24px;">Who reads it</h3>
+    <ul>
+      <li><strong>Your personal leader-dashboard</strong> — your scoreboard at an obscure GitHub Pages URL, just your slice.</li>
+      <li><strong>Cameron's org dashboard</strong> — pulls each leader's status into the rollup view, with click-through to each leader's full dashboard.</li>
+      <li><strong>The COS Network adoption matrix</strong> — agents × patterns grid showing who's caught up across the network. Albert is the truth source; columns auto-derive from his adopted state.</li>
+    </ul>
+
+    <h3 style="margin-top: 24px;">Where it all lives</h3>
+    <p>
+      Everything public-facing lives in one obscure GitHub Pages repo (<code>einstein-cos-matrix-*</code>) — the matrix HTML at root, each leader's dashboard + status.json in a subfolder named after their COS. Your COS clones that repo, edits your subfolder on /wrap, pushes. Within ~30 seconds the deployed matrix and org dashboard reflect your change.
+    </p>
+
+    <p style="margin-top: 18px; font-size: 13px; color: var(--gray-500);">
+      Implementation plan + decisions log: see <code>AI Operating System/cos-network-v2-plan.html</code>. Full content for this section ships at Phase 1 kickoff.
+    </p>
+
     <p style="margin-top: 36px; color: var(--gray-500); font-size: 12.5px;">
       Built for the Einstein Roundtable rollout · Q2 2026 · Internal use only ·
       Drop feedback in the 💬 widget anytime.
