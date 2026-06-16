@@ -1905,6 +1905,20 @@ The HTML body renders empty when wrapped.
       </div>
     </details>
 
+    <details class="faq-item">
+      <summary>An always-on local tool server needs Full Disk Access — or it silently 404s everything</summary>
+      <div>
+        If you run a little local server so your tools/dashboards are always available (e.g. a launch-at-login agent serving your
+        workspace), macOS will quietly <strong>block it from reading ~/Desktop, ~/Documents, and iCloud folders</strong> — its privacy
+        protection. The server looks "up" but returns <strong>404 on every tool</strong>, and the symptom is maddening because one tool
+        looks broken when really the whole server can't see your files. The tell is <code>No permission to list directory</code> in the
+        server log. <strong>The fix is a one-time grant:</strong> add the program that runs the server (for us, the Python interpreter)
+        to <em>System Settings → Privacy &amp; Security → Full Disk Access</em>, toggle it on. After that it's genuinely always-on —
+        starts at login, respawns if it dies, and can actually read your workspace. (Servers your COS starts directly work without this
+        because they inherit the app's existing permission — it's specifically the auto-start/login ones that need the grant.)
+      </div>
+    </details>
+
     <h2 id="status-network"><span class="sec-num">14</span>Your Status File + the Network</h2>
     <div style="background: linear-gradient(180deg, #fff7ee, transparent); border-left: 4px solid #EF8B22; padding: 14px 18px; border-radius: 8px; margin: 12px 0 18px;">
       <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #C96A0E; margin-bottom: 6px;">Phase 1 — placeholder · rolling out this week</div>
