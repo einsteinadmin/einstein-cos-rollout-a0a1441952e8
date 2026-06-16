@@ -1776,7 +1776,7 @@ The HTML body renders empty when wrapped.
       .faq-item > div code { background: var(--gray-100, #f1f3f5); padding: 1px 5px; border-radius: 4px; }
     </style>
 
-    <details class="faq-item" open>
+    <details class="faq-item" data-added="2026-06-12" open>
       <summary>The #1 habit: run /save and /wrap — "running /gm" alone saves nothing</summary>
       <div>
         Your agent does <strong>not</strong> auto-save. Until you run <code>/save</code> or <code>/wrap</code>,
@@ -1788,7 +1788,7 @@ The HTML body renders empty when wrapped.
       </div>
     </details>
 
-    <details class="faq-item">
+    <details class="faq-item" data-added="2026-06-12">
       <summary>Pin your active sessions; don't unpin until you've saved</summary>
       <div>
         Pin the sessions you're actively working — treat that pinned area as your "today" folder. <strong>Don't unpin
@@ -1797,7 +1797,7 @@ The HTML body renders empty when wrapped.
       </div>
     </details>
 
-    <details class="faq-item">
+    <details class="faq-item" data-added="2026-06-12">
       <summary>Click into the actions your COS takes — that's how you learn to steer it</summary>
       <div>
         When the agent runs, click into the "Ran command," "Edited file," etc. lines. You'll see <em>how</em> it writes
@@ -1806,7 +1806,7 @@ The HTML body renders empty when wrapped.
       </div>
     </details>
 
-    <details class="faq-item">
+    <details class="faq-item" data-added="2026-06-12">
       <summary>Once you're saving, trust your COS to update Monday — drop the manual habit</summary>
       <div>
         Tell it your game plan for the day and let it move pulses, mark things done, and post recaps. Managing the board
@@ -1814,7 +1814,7 @@ The HTML body renders empty when wrapped.
       </div>
     </details>
 
-    <details class="faq-item">
+    <details class="faq-item" data-added="2026-06-12">
       <summary>Give your COS your history — point it at your Claude chat-export folder</summary>
       <div>
         Export your old Claude conversations and point your agent at the folder once. It'll pull in context from before
@@ -1822,7 +1822,7 @@ The HTML body renders empty when wrapped.
       </div>
     </details>
 
-    <details class="faq-item">
+    <details class="faq-item" data-added="2026-06-12">
       <summary>Multi-device? Keep iCloud healthy</summary>
       <div>
         Your COS project files live locally, so to use the same COS across two Macs the project folder has to sync via
@@ -1831,7 +1831,7 @@ The HTML body renders empty when wrapped.
       </div>
     </details>
 
-    <details class="faq-item">
+    <details class="faq-item" data-added="2026-06-12">
       <summary>Your COS handles git itself — you shouldn't touch GitHub Desktop day-to-day</summary>
       <div>
         Pull and push happen automatically inside <code>/save</code> and <code>/wrap</code>. GitHub Desktop is only used
@@ -1840,7 +1840,7 @@ The HTML body renders empty when wrapped.
       </div>
     </details>
 
-    <details class="faq-item">
+    <details class="faq-item" data-added="2026-06-12">
       <summary>Talk to it — dictation makes the whole thing click</summary>
       <div>
         The COS is conversational, and the richer your input the better the output — so talking beats typing.
@@ -1849,7 +1849,7 @@ The HTML body renders empty when wrapped.
       </div>
     </details>
 
-    <details class="faq-item">
+    <details class="faq-item" data-added="2026-06-12">
       <summary>Mind the "literal genie" — destructive verbs get taken literally</summary>
       <div>
         Your COS does exactly what you say, not what you meant. Brian told Vera to "remove the IT huddle" — and it
@@ -1860,7 +1860,7 @@ The HTML body renders empty when wrapped.
       </div>
     </details>
 
-    <details class="faq-item">
+    <details class="faq-item" data-added="2026-06-12">
       <summary>Start every day with /gm — before the fires</summary>
       <div>
         The morning you get pulled into a termination, a hiring scramble, or a tech issue the second you sit down is the
@@ -1870,7 +1870,7 @@ The HTML body renders empty when wrapped.
       </div>
     </details>
 
-    <details class="faq-item">
+    <details class="faq-item" data-added="2026-06-12">
       <summary>When a connection breaks, have your COS post a diagnostic to the SCB</summary>
       <div>
         MCP connections (Google, Slack, Drive, Monday) can silently drop and quietly break your skills — an end-of-day
@@ -1880,7 +1880,7 @@ The HTML body renders empty when wrapped.
       </div>
     </details>
 
-    <details class="faq-item">
+    <details class="faq-item" data-added="2026-06-12">
       <summary>Audit AI-built tools with adversarial sub-agents before you trust them</summary>
       <div>
         When your COS builds you a real tool (a dashboard, a meeting tool, a calculator), don't just eyeball it — have it run a
@@ -1892,7 +1892,7 @@ The HTML body renders empty when wrapped.
       </div>
     </details>
 
-    <details class="faq-item">
+    <details class="faq-item" data-added="2026-06-16">
       <summary>Your COS can generate finished PDFs and draft the email — you don't print one-by-one</summary>
       <div>
         When a local HTML tool has a "Print / Save PDF" button, you don't have to open each view and print it by hand. Your COS can
@@ -1905,7 +1905,7 @@ The HTML body renders empty when wrapped.
       </div>
     </details>
 
-    <details class="faq-item">
+    <details class="faq-item" data-added="2026-06-16">
       <summary>An always-on local tool server needs Full Disk Access — or it silently 404s everything</summary>
       <div>
         If you run a little local server so your tools/dashboards are always available (e.g. a launch-at-login agent serving your
@@ -1916,6 +1916,38 @@ The HTML body renders empty when wrapped.
         to <em>System Settings → Privacy &amp; Security → Full Disk Access</em>, toggle it on. After that it's genuinely always-on —
         starts at login, respawns if it dies, and can actually read your workspace. (Servers your COS starts directly work without this
         because they inherit the app's existing permission — it's specifically the auto-start/login ones that need the grant.)
+      </div>
+    </details>
+
+    <details class="faq-item" data-added="2026-06-16">
+      <summary>Your tool library is the launchpad — one page that opens everything you've built</summary>
+      <div>
+        As your COS builds you tools — dashboards, modelers, workshops, one-pagers — they pile up and get easy to lose. Have your COS
+        keep a <strong>single tool-library page</strong>: every tool as a card with a one-line description, who it's for, and a click-to-open
+        link, filterable by topic. It becomes the one bookmark you open to reach all of them, instead of hunting through folders or
+        old chat threads. Cameron's runs as an always-on local page; when a new tool ships, the COS adds a card at <code>/wrap</code>.
+        The discipline that makes it work: <strong>one library file, one source of truth</strong> — no duplicate copies that drift.
+      </div>
+    </details>
+
+    <details class="faq-item" data-added="2026-06-16">
+      <summary>Pin your live work in Claude Code's left rail so you can jump back in</summary>
+      <div>
+        Claude Code's left-hand rail lets you <strong>pin sessions</strong> — keep the threads you're actively working pinned so they don't
+        scroll away under one-off questions. Pair it with the "one session per topic" habit: each substantive workstream gets its own
+        session, pinned while it's live, unpinned when it's done. Combined with <code>/save</code> (which writes the handoff so any session
+        is safe to close), you get a clean board of "what's in flight" instead of one endless scroll.
+      </div>
+    </details>
+
+    <details class="faq-item" data-added="2026-06-16">
+      <summary>Have your COS build a "workshop" mockup before it builds the real thing</summary>
+      <div>
+        When you're changing something real — a quote form, a field app, an email sequence — don't describe the change in the abstract.
+        Have your COS build an <strong>interactive HTML workshop</strong>: the actual screens, with each proposed change toggleable inline so
+        you (and the people reviewing) can <em>see</em> it before anyone builds it. You react to a real mockup instead of a paragraph,
+        decisions get made faster and with less rework, and the workshop's export becomes the build spec. Cameron's used this for the
+        quote funnel, the field mover app, the RFQ email sequence. Ask for "build me a workshop so I can see it."
       </div>
     </details>
 
