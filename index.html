@@ -1951,6 +1951,18 @@ The HTML body renders empty when wrapped.
       </div>
     </details>
 
+    <details class="faq-item" data-added="2026-06-17">
+      <summary>Embed living docs inside the tool that gets shared — not as separate files</summary>
+      <div>
+        When a tool has a doc that travels with it — a build spec, a handoff, a decision log — put it <strong>inside the tool</strong>,
+        not in a loose <code>.md</code> next to it. Have your COS embed it as a button that renders the doc and downloads it on click.
+        One artifact instead of two means the doc <em>can't drift</em> from the thing it describes: update one place, redeploy, and whoever
+        opens the tool always has the current version. Cameron did this on the field mover app workshop — the locked build spec rides inside
+        the tool (a 📋 button), so when it got handed to Matisen + Fabian there was nothing separate to keep in sync. Ask for
+        "embed the spec in the tool as a download."
+      </div>
+    </details>
+
     <h2 id="status-network"><span class="sec-num">14</span>Your Status File + the Network</h2>
     <div style="background: linear-gradient(180deg, #fff7ee, transparent); border-left: 4px solid #EF8B22; padding: 14px 18px; border-radius: 8px; margin: 12px 0 18px;">
       <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #C96A0E; margin-bottom: 6px;">Phase 1 — placeholder · rolling out this week</div>
